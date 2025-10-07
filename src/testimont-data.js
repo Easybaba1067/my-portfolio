@@ -1,7 +1,7 @@
 const testimonies = [
   {
     image:
-      "https://images.unsplash.com/photo-1624797432677-6f803a98acb3?q=80&w=386&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1633367583895-08545d733dfe?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     small: "Anthony Johnson, CEO of Creative Minds ",
     text: "Easyb Studio transformed our online presence with a stunning website that perfectly captures our brand's essence. Their team was professional, responsive, and delivered exceptional results. We're thrilled with our website",
   },
