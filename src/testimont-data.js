@@ -1,6 +1,7 @@
 const testimonies = [
   {
-    image: "/Testimony/zbra-marketing-N4AK7Vy1McM-unsplash.jpg",
+    image:
+      "https://images.unsplash.com/photo-1624797432677-6f803a98acb3?q=80&w=386&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     small: "Anthony Johnson, CEO of Creative Minds ",
     text: "Easyb Studio transformed our online presence with a stunning website that perfectly captures our brand's essence. Their team was professional, responsive, and delivered exceptional results. We're thrilled with our website",
   },
@@ -11,12 +12,14 @@ const testimonies = [
     text: "We were impressed by Easyb Studio's attention to detail and commitment to quality. They built a website that exceeded our expectations, and their support has been top-notch. We highly recommend Easyb Studio for all your website development needs.",
   },
   {
-    image: "/Testimony/rupinder-singh-jK9ZavfMu50-unsplash.jpg",
+    image:
+      "https://images.unsplash.com/photo-1624797432677-6f803a98acb3?q=80&w=386&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     small: "Emily Rodriguez, Owner of Blooming Designs ",
     text: "Easyb Studio's expertise in website development is unmatched. They created a beautiful, user-friendly website for our business, and the process was seamless. Their team is talented, friendly, and dedicated to delivering outstanding results. We're so grateful for their services!",
   },
   {
-    image: "Testimony/jadon-johnson-Jqy1EOYUqLA-unsplash.jpg",
+    image:
+      "https://images.unsplash.com/photo-1537511446984-935f663eb1f4?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     small: "Mark Davis, Founder of Tech Solutions ",
     text: "Working with Easyb Studio was a game-changer for our brand. They took our vision and transformed it into a sleek, professional website that truly reflects who we are. The communication was smooth, the turnaround time was impressive, and the final product exceeded our expectations. We couldn't be happier!",
   },

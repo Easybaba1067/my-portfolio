@@ -129,9 +129,6 @@
   .contact form textarea {
     width: 70%;
   }
-  .hide {
-    display: none;
-  }
   .showcasing {
     grid-template-columns: repeat(1, 6fr);
   }
@@ -143,16 +140,12 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .sec-image.hide {
-    display: none;
-  }
   .image-page {
     .sec-image {
       .hide {
         display: none;
       }
       .img2 {
-        /* height: 350px; */
         width: 800px;
       }
     }
