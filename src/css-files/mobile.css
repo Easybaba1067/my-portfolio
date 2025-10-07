@@ -1,0 +1,160 @@
+@media (max-width: 768px) {
+  /* ------ mobile nav bar ----- */
+  .mobile-navbar {
+    display: block;
+    position: fixed;
+    height: 100vh;
+    top: 6%;
+    left: 0%;
+    width: 100%;
+    background-color: rgb(3, 16, 68);
+    z-index: 2;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0);
+  }
+  .mobile-navbar.hidden {
+    transform: translateX(200vw);
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ul {
+      display: flex;
+      flex-direction: column;
+      li {
+        padding: 15px;
+        border-radius: 20px;
+        margin: 50px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.973);
+      }
+    }
+  }
+  .main-view {
+    height: 80vh;
+    .big-heading {
+      font-size: 1.6rem;
+      font-family: "Times New Roman", Times, serif;
+    }
+    .header-text {
+      padding: 10px;
+      font-size: 1.4rem;
+      span {
+        display: none;
+      }
+    }
+  }
+  .nav {
+    display: none;
+  }
+  .nav-bar {
+    padding: 0 10px;
+    .logo {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      div {
+        display: block;
+      }
+    }
+  }
+  .image-page {
+    flex-direction: column;
+    .sec-image {
+      img {
+        width: 100%;
+      }
+      h2 {
+        top: 50%;
+        right: 30%;
+      }
+      .img2 {
+        width: 350px;
+      }
+    }
+  }
+  .about {
+    .about-h1 {
+      width: 80%;
+      font-size: 1.5rem;
+    }
+  }
+  .expirence-section {
+    .skills-h1 {
+      width: 80%;
+      font-size: 1.5rem;
+    }
+  }
+  .content {
+    grid-template-columns: repeat(1, 2fr);
+    gap: 5px;
+  }
+  .portfolio-contact {
+    h1 {
+      font-size: 1rem;
+    }
+    .contact-grid {
+      grid-template-columns: repeat(1, 6fr);
+    }
+  }
+  /* <-------- Resume screen ------> */
+  .resume-view {
+    height: 80vh;
+    .introduction {
+      height: 80%;
+    }
+    .qoute {
+      display: none;
+    }
+    .page-name {
+      padding: 10px;
+      font-size: 1rem;
+    }
+  }
+  .career {
+    .career-summary {
+      grid-template-columns: repeat(1, 2fr);
+    }
+  }
+
+  .profession-wrap {
+    grid-template-columns: repeat(1, 2fr);
+  }
+  .contact-info {
+    width: 100%;
+  }
+  .contact form textarea {
+    width: 70%;
+  }
+  .hide {
+    display: none;
+  }
+  .showcasing {
+    grid-template-columns: repeat(1, 6fr);
+  }
+  .image-carousel {
+    img {
+      width: 350px;
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sec-image.hide {
+    display: none;
+  }
+  .image-page {
+    .sec-image {
+      .hide {
+        display: none;
+      }
+      .img2 {
+        /* height: 350px; */
+        width: 800px;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.showcasing {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(2, 6fr);
+  text-align: center;
+  margin-bottom: 2rem;
+  h1 {
+    border: solid 1px rgb(23, 46, 138);
+    width: 50%;
+    font-style: oblique;
+    font-family: "Courier New", Courier, monospace;
+    color: rgb(23, 46, 138);
+    border-radius: 20px;
+    padding: 5px;
+    margin: auto;
+  }
+}
+.image-carousel {
+  margin: 2rem;
+  img {
+    width: 400px;
+  }
+}
+.project-footer {
+  text-align: center;
+  background-color: rgb(148, 186, 230);
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}

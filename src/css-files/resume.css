@@ -1,0 +1,333 @@
+li {
+  text-decoration: none;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.background {
+  background: #ffff;
+  padding: 10px;
+}
+.background.active {
+  background-color: #271b1b;
+  background-color: rgba(25, 21, 29, 0.8);
+  color: white;
+}
+.resume-view {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  background: url("/public/pexels-veeterzy-303383.jpg") no-repeat center
+    center/cover;
+
+  .page-name {
+    padding: 2px 5rem;
+    position: relative;
+    z-index: 1;
+    color: #ffff;
+    grid-template-columns: 2fr 2fr 2fr;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: darkgoldenrod;
+    font-family: "Unna", serif;
+    font-style: oblique;
+    font-size: 1.8rem;
+    white-space: nowrap;
+  }
+  .introduction {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    h1 {
+      font-style: oblique;
+    }
+    h2 {
+      background-color: rgb(255, 255, 255);
+      color: black;
+      border-radius: 10px;
+      font-size: 12px;
+      padding: 10px;
+      margin: 10px;
+    }
+  }
+  .profile-pic img {
+    width: 150px;
+    border-radius: 50%;
+  }
+  .downloadBtn {
+    padding: 5px;
+    background-color: darkgoldenrod;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    a {
+      color: #ffff;
+    }
+  }
+  .qoute {
+    position: absolute;
+    bottom: 10%;
+    left: 15px;
+    font-style: italic;
+    line-height: 1.2rem;
+    width: 500px;
+    color: #ffff;
+
+    .qoute,
+    .highlight {
+      white-space: nowrap;
+      padding: 0 0 10px;
+      width: 200px;
+      color: darkgoldenrod;
+    }
+  }
+  .resume-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(23, 35, 37, 0.58);
+  }
+}
+
+.resume-about-content {
+  padding: 5px 0;
+  display: none;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(140deg, rgb(190, 163, 93), goldenrod);
+}
+
+.resume-btn {
+  display: none;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  background: transparent;
+  border: solid rgb(82, 77, 77) 2px;
+  font-style: oblique;
+  color: #ffff;
+  font-size: 1.5rem;
+}
+
+.resume-btn:hover {
+  background-color: #ffff;
+  color: goldenrod;
+}
+.career-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 0 2rem;
+}
+.career-info {
+  background: linear-gradient(140deg, rgb(163, 119, 0), rgb(97, 91, 76));
+  color: aliceblue;
+  margin: auto;
+  padding: 2rem;
+  font-size: 1.1rem;
+  border: 1px solid darkgoldenrod;
+  border-radius: 20px;
+  margin: 1rem;
+  h2 {
+    font-family: "Courier New", Courier, monospace;
+    font-style: oblique;
+  }
+}
+.career-flex {
+  display: flex;
+}
+.career-wrap h1 {
+  font-size: 2rem;
+  font-style: oblique;
+}
+.career-wrap .line {
+  background-color: darkgoldenrod;
+  margin-top: 5px;
+  border-radius: 20px;
+  padding: 0.2px;
+  height: 2px;
+  width: 150px;
+}
+/* .career-wrap .theme {
+
+} */
+.career-wrap .theme i {
+  border: 2px solid darkgoldenrod;
+  margin: 5px;
+  border-radius: 50%;
+}
+.theme.active .mode1 {
+  display: block;
+}
+.theme .mode1 {
+  display: none;
+}
+.theme.active .mode2 {
+  display: none;
+}
+.theme .mode2 {
+  display: block;
+}
+.career-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  white-space: nowrap;
+}
+.profession li {
+  list-style: none;
+}
+.profession {
+  border: darkgoldenrod 3px solid;
+  border-radius: 20px;
+  font-family: "Unna", serif;
+  font-style: normal;
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem;
+}
+.profession h1 {
+  color: darkgoldenrod;
+  font-family: "Unna", serif;
+  font-style: oblique;
+}
+.profession-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  margin-left: 3rem;
+}
+.profession-wrap,
+.seperate {
+  margin: 1rem;
+  ul,
+  li {
+    margin: 10px;
+  }
+}
+.profession .line {
+  background-color: darkgoldenrod;
+  margin-top: 5px;
+  margin-left: 1rem;
+  border-radius: 20px;
+  height: 2px;
+  width: 100px;
+}
+.profession .headings {
+  line-height: 2px;
+  h1 {
+    white-space: nowrap;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  text-align: center;
+  font-family: "Unna", serif;
+  font-style: normal;
+}
+.contact-info {
+  background: url("/public/pexels-olly-842548.jpg") no-repeat center
+    center/cover !important;
+  width: 800px;
+  color: #ffff;
+  border-radius: 30px;
+  padding: 2rem;
+  div {
+    white-space: nowrap;
+  }
+}
+.contact-info h1 {
+  color: #ffff;
+}
+.contact form input {
+  position: relative;
+  margin: 1.5rem;
+  padding: 0.2rem;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.contact form textarea {
+  height: 100px;
+  width: 35%;
+  border-radius: 20px;
+  text-align: center;
+}
+form input:focus,
+form textarea:focus {
+  outline: none;
+}
+button.Btn {
+  background-color: darkgoldenrod;
+  color: #ffff;
+  border: 2px solid darkgoldenrod;
+  padding: 0.5rem;
+  max-width: 15%;
+  border-radius: 10px;
+}
+.carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.carousel-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimony {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 1rem;
+  border: 1px darkgoldenrod solid;
+}
+.testimony p {
+  /* margin: auto; */
+  padding: 1rem;
+  margin: 1rem;
+  max-width: 500px;
+  text-align: center;
+}
+.testimony-image {
+  text-align: center;
+}
+.testimony-image img {
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+}
+
+.footer {
+  text-align: center;
+  background-color: rgb(230, 206, 148);
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}

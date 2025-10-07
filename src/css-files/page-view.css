@@ -1,0 +1,268 @@
+.main-view {
+  background: url("/public/pexels-daan-stevens-66128-939331.jpg") center
+    center/cover no-repeat;
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  overflow-x: hidden;
+  .big-heading {
+    white-space: nowrap;
+    transform: translateX(1600px);
+    transition: transform 5s ease;
+  }
+  .big-heading.active {
+    padding-left: 10px;
+    transform: translateX(0px);
+  }
+  .highlight {
+    width: 100%;
+    display: flex;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 3rem;
+    align-items: flex-start;
+    color: aquamarine;
+    position: relative;
+    z-index: 1;
+  }
+  .header-text {
+    transform: translateY(-1600px);
+    transition: transform 6s ease;
+    padding: 0 1rem 1rem;
+    z-index: 1;
+    color: aliceblue;
+    font-style: italic;
+    font-size: 1.5rem;
+  }
+  .header-text.active {
+    transform: translateX(0px);
+  }
+
+  .page-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(23, 35, 37, 0.58);
+  }
+}
+.image-page {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .sec-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    img {
+      width: 620px;
+      border-radius: 20px;
+      margin: 5px;
+    }
+    .img2 {
+      /* height: 350px; */
+      width: 700px;
+    }
+    h2 {
+      color: black;
+      font-style: oblique;
+      background-color: goldenrod;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      padding: 8px;
+      border-radius: 20px;
+    }
+  }
+}
+
+.expirence-section {
+  .skills-h1 {
+    margin: auto;
+    width: 30%;
+    border-radius: 20px;
+    border: solid goldenrod 1px;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-style: oblique;
+    white-space: nowrap;
+  }
+}
+.content {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 2rem;
+  margin: auto;
+  background-color: #ffff;
+
+  .sec-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    text-align: center;
+    background-color: rgb(15, 62, 122);
+    color: #ffff;
+    font-family: "Courier New", Courier, monospace;
+    padding: 1rem;
+    border-radius: 30px;
+
+    h1 {
+      white-space: nowrap;
+      text-align: center;
+      color: goldenrod;
+      border-radius: 20px;
+      padding: 5px 10px;
+      border: 2px solid goldenrod;
+      margin: 0 1rem 0;
+    }
+  }
+  .sec-content ul {
+    padding: 1rem 0;
+    li {
+      font-size: 1.5rem;
+      padding: 5px;
+    }
+  }
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 20px;
+  .about-h1 {
+    margin: auto;
+    width: 30%;
+    border-radius: 20px;
+    border: solid goldenrod 1px;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-style: oblique;
+    white-space: nowrap;
+  }
+  .portfolio-about-content {
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(140deg, #1c3b2f, #278adb);
+  }
+  p {
+    max-width: 1000px;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+  .portfolio-btn {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background: transparent;
+    border: solid goldenrod 2px;
+    color: #ffff;
+    button {
+      background-color: transparent;
+    }
+  }
+  .portfolio-btn:hover {
+    background: #ffff;
+    color: #278adb;
+  }
+  .portfolio-btn:focus {
+    outline: none;
+  }
+}
+.portfolio-contact {
+  font: sans-serif;
+  text-align: center;
+  background-color: rgb(23, 46, 138);
+  padding: 2rem;
+  border-radius: 20px;
+  color: #ffff;
+  portfolio.contact h1 {
+    padding: 0.5rem;
+  }
+  .contact-grid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+
+    div,
+    p,
+    a {
+      color: #ffff;
+    }
+  }
+  .contact .mail {
+    font-size: 1.4rem;
+  }
+  .contact .number {
+    font-size: 1.5rem;
+  }
+  .contact a {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .contact-form {
+    max-width: 300px;
+    margin: auto;
+    padding: 10px;
+  }
+  .contact-form div {
+    text-align: center;
+  }
+  form div {
+    width: 200px;
+    display: block;
+    margin: 10px;
+    text-align: left;
+  }
+  form input {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+  }
+  form textarea {
+    width: 200px;
+    border-radius: 10px;
+    height: 100px;
+    padding: 10px;
+  }
+  .send-btn {
+    background-color: darkslategray;
+    border-radius: 10px;
+    border: 1px #ffff solid;
+    padding: 5px;
+    width: 100px;
+    color: antiquewhite;
+  }
+  .send-btn:hover {
+    border: 1px #278adb solid;
+    background-color: #ffff;
+    color: #278adb;
+  }
+  form input:focus,
+  form textarea:focus,
+  .send-btn:focus {
+    outline: none;
+  }
+  .copyright {
+    padding: 1rem;
+  }
+}
