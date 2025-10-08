@@ -3,7 +3,7 @@
     center/cover no-repeat;
   position: relative;
   height: 90vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -71,12 +71,13 @@
       width: 700px;
     }
     h2 {
+      white-space: nowrap;
       color: black;
       font-style: oblique;
       background-color: goldenrod;
       position: absolute;
       top: 50%;
-      right: 50%;
+      right: 40%;
       padding: 8px;
       border-radius: 20px;
     }
@@ -84,6 +85,11 @@
 }
 
 .expirence-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   .skills-h1 {
     margin: auto;
     width: 30%;
@@ -97,7 +103,6 @@
   }
 }
 .content {
-  max-width: 1000px;
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   gap: 2rem;
@@ -199,7 +204,9 @@
     margin-top: 10px;
     display: grid;
     grid-template-columns: repeat(4, 2fr);
-
+    div {
+      margin: 10px;
+    }
     div,
     p,
     a {

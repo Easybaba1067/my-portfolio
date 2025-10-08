@@ -6,6 +6,7 @@ import ProjectPage from "./pages/project";
 import "./App.css";
 import "./css-files/mobile.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "devicon/devicon.min.css";
 
 function App() {
   return (

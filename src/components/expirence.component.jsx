@@ -14,27 +14,38 @@ const Expirence = () => {
 
             <ul>
               <li>
-                <i className="bi bi-filetype-html" style={myStyle}></i>
+                <i className="devicon-html5-plain colored" style={myStyle}></i>
                 HTML
               </li>
               <li>
-                <i className="bi bi-filetype-css" style={myStyle}></i>
+                <i className="devicon-css3-plain colored" style={myStyle}></i>
                 CSS
               </li>
               <li>
-                <i className="bi bi-filetype-js" style={myStyle}></i>
+                {" "}
+                <i
+                  className="devicon-javascript-plain colored"
+                  style={myStyle}
+                ></i>
                 javascript
               </li>
               <li>
-                <i className="bi bi-bootstrap" style={myStyle}></i>
+                <i
+                  className="devicon-bootstrap-plain colored"
+                  style={myStyle}
+                ></i>
                 Bootsrap
               </li>
               <li>
-                <i className="bi bi-filetype-js" style={myStyle}></i>
+                <i className="devicon-figma-plain colored" style={myStyle}></i>
+                Figma
+              </li>
+              <li>
+                <i className="devicon-react-plain colored" style={myStyle}></i>
                 React js
               </li>
               <li>
-                <i className="bi bi-git" style={myStyle}></i>
+                <i className="devicon-git-plain colored" style={myStyle}></i>
                 Git and Version control
               </li>
             </ul>
@@ -44,15 +55,18 @@ const Expirence = () => {
 
             <ul>
               <li>
-                <i className="bi bi-filetype-js" style={myStyle}></i>
+                <i className="devicon-nodejs-plain colored" style={myStyle}></i>
                 Nodejs
               </li>
               <li>
-                <i className="bi bi-filetype-js" style={myStyle}></i>
+                <i
+                  className="devicon-express-original colored"
+                  style={myStyle}
+                ></i>
                 Expressjs
               </li>
               <li>
-                <i className="bi bi-filetype-py" style={myStyle}></i>
+                <i className="devicon-python-plain colored" style={myStyle}></i>
                 Python
               </li>
 
@@ -67,15 +81,21 @@ const Expirence = () => {
 
             <ul>
               <li>
-                <i className="bi bi-filetype-sql" style={myStyle}></i>
+                <i className="devicon-mysql-plain colored" style={myStyle}></i>
                 SQL
               </li>
               <li>
-                <i className="bi bi-database" style={myStyle}></i>
+                <i
+                  className="devicon-mongodb-plain colored"
+                  style={myStyle}
+                ></i>
                 MongoDB
               </li>
               <li>
-                <i className="bi bi-database-fill" style={myStyle}></i>
+                <i
+                  className="devicon-mongoose-original colored"
+                  style={myStyle}
+                ></i>
                 Mongoose
               </li>
             </ul>
@@ -84,19 +104,25 @@ const Expirence = () => {
             <h1>Mobile development</h1>
             <ul>
               <li>
-                <i className="bi bi-filetype-sql" style={myStyle}></i>
+                <i
+                  className="devicon-flutter-plain colored"
+                  style={myStyle}
+                ></i>
                 Flutter
               </li>
               <li>
-                <i className="bi bi-database" style={myStyle}></i>
+                <i className="devicon-dart-plain colored" style={myStyle}></i>
                 Dart
               </li>
               <li>
-                <i className="bi bi-database-fill" style={myStyle}></i>
+                <i
+                  className="devicon-firebase-plain colored"
+                  style={myStyle}
+                ></i>
                 Firebase
               </li>
               <li>
-                <i className="bi bi-database-fill" style={myStyle}></i>
+                <i className="bi bi-door-open" style={myStyle}></i>
                 Authentication
               </li>
             </ul>

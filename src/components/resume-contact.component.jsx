@@ -12,7 +12,7 @@ const ResumeContact = () => {
               ></i>
             </h1>
             <div>
-              <form name="contact" method="POST" data-netlify="true">
+              <form name="contact" netlify>
                 <div>
                   <label for="name">FULL NAME</label>
                   <input type="name" name="Name" placeholder="Name" />

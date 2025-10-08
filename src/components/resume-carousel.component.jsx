@@ -63,7 +63,7 @@ const ResumeCarousel = () => {
     <>
       <div className="carousel">
         <div className="carousel-details">
-          <div className="hide" onClick={previousBtn}>
+          <div className="slide-hide" onClick={previousBtn}>
             <i className="bi bi-caret-left-fill" style={careerStyle}></i>
           </div>
           <Testimony
@@ -71,7 +71,7 @@ const ResumeCarousel = () => {
             handleTouchStart={handleTouchStart}
             handleTouchEnd={handleTouchEnd}
           />
-          <div className="hide" onClick={nextBtn}>
+          <div className="slide-hide" onClick={nextBtn}>
             <i className="bi bi-caret-right-fill" style={careerStyle}></i>
           </div>
         </div>

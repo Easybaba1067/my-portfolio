@@ -5,7 +5,7 @@ const Footer = ({ targetRef }) => {
     <>
       <footer ref={targetRef} className="portfolio-contact">
         <div className="contact-form">
-          <form name="portfolio-contact" method="POST" data-netlify="true">
+          <form name="portfolio-contact" netlify>
             <div>
               <input name="name" type="text" required />
               <label>Name</label>
@@ -34,15 +34,24 @@ const Footer = ({ targetRef }) => {
         <h1>let't work great things together</h1>
         <div className="contact-grid">
           <div className="mail">
-            <i className="bi bi-google" style={{ fontSize: "1.5rem" }}></i>
+            <i
+              className="devicon-google-plain colored"
+              style={{ fontSize: "1.5rem", color: "aqua" }}
+            ></i>
             <p>theeasybstudio@gmail.com</p>
           </div>
           <div className="number">
-            <i className="bi bi-whatsapp" style={{ fontSize: "1.5rem" }}></i>
+            <i
+              className="bi bi-whatsapp"
+              style={{ fontSize: "1.5rem", color: "aqua" }}
+            ></i>
             <p>+234-913-719-0738</p>
           </div>
           <div className="linkedin">
-            <i className="bi bi-linkedin" style={{ fontSize: "1.5rem" }}></i>
+            <i
+              className="devicon-linkedin-plain colored"
+              style={{ fontSize: "1.5rem", color: "aqua" }}
+            ></i>
             <p>
               <a
                 href="https://www.linkedin.com/in/oluwoleisrael"
@@ -54,7 +63,10 @@ const Footer = ({ targetRef }) => {
             </p>
           </div>
           <div className="Facebook">
-            <i className="bi bi-facebook" style={{ fontSize: "1.5rem" }}></i>
+            <i
+              className="devicon-facebook-plain colored"
+              style={{ fontSize: "1.5rem", color: "aqua" }}
+            ></i>
             <p>
               <a
                 href="https://www.facebook.com/TheEasybStudio"

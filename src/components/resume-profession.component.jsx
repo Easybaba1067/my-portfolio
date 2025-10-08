@@ -22,25 +22,46 @@ const Profession = () => {
             </h2>
             <ul>
               <li>
-                <i className="bi bi-filetype-html" style={myStyle}></i>
+                <i className="devicon-html5-plain colored" style={myStyle}></i>
                 HTML
               </li>
               <li>
-                <i className="bi bi-filetype-css" style={myStyle}></i>
+                <i className="devicon-css3-plain colored" style={myStyle}></i>
                 CSS
               </li>
               <li>
-                <i className="bi bi-filetype-js" style={myStyle}></i>
+                <i
+                  className="devicon-javascript-plain colored"
+                  style={myStyle}
+                ></i>
                 JavaScript
               </li>
 
               <li>
-                <i className="bi bi-filetype-py" style={myStyle}></i>
-                Python
+                <i
+                  className="devicon-flutter-plain colored"
+                  style={myStyle}
+                ></i>
+                Flutter and Dart
               </li>
               <li>
-                <i className="bi bi-code-square" style={myStyle}></i>
-                Flutter and Dart
+                <i className="devicon-react-plain colored" style={myStyle}></i>
+                React js
+              </li>
+              <li>
+                <i
+                  className="devicon-mongodb-plain colored"
+                  style={myStyle}
+                ></i>
+                MongoDB
+              </li>
+              <li>
+                <i className="devicon-nodejs-plain colored" style={myStyle}></i>
+                NodeJs
+              </li>
+              <li>
+                <i className="devicon-github-plain colored" style={myStyle}></i>
+                Git
               </li>
             </ul>
           </div>

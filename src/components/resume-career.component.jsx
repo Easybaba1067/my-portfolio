@@ -54,7 +54,7 @@ const Career = ({ isActive, changeBackground }) => {
           </div>
           <div className="career-info">
             <div className="career-flex">
-              <h2>App development</h2>
+              <h2> Mobile App development</h2>
 
               <i className="bi bi-code-slash" style={careerStyle}></i>
             </div>

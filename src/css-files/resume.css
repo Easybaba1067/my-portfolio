@@ -16,7 +16,7 @@ a {
 }
 .resume-view {
   height: 90vh;
-  width: 100%;
+  width: 100vw;
   position: relative;
   background: url("/public/pexels-veeterzy-303383.jpg") no-repeat center
     center/cover;
