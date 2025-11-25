@@ -1,0 +1,192 @@
+@media (max-width: 767px) {
+  /* ------ mobile nav bar ----- */
+  .mobile-navbar {
+    display: block;
+    border-radius: 20px 0 0 20px;
+    position: fixed;
+    height: 100vh;
+    top: 6%;
+    right: 0%;
+    width: 60%;
+    background: linear-gradient(300deg, rgb(3, 16, 68), #83bde4);
+    z-index: 3;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+  }
+  .mobile-navbar.hidden {
+    transform: translateX(200vw);
+  }
+
+  .nav-overlay {
+    position: fixed;
+    top: 6%;
+    left: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    width: 100%;
+    transform: translateX(200vw);
+  }
+  .nav-overlay.open {
+    display: block;
+    transition: transform 0.6s ease-in-out;
+    transform: translateX(0);
+  }
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ul {
+      display: flex;
+      flex-direction: column;
+      li {
+        padding: 10px;
+        border-radius: 20px;
+        margin: 50px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.973);
+      }
+    }
+  }
+  .main-view {
+    height: 80vh;
+    .big-heading {
+      font-size: 1.2rem;
+      font-family: "Times New Roman", Times, serif;
+    }
+    .header-text {
+      padding: 10px;
+      font-size: 1.4rem;
+      span {
+        display: none;
+      }
+    }
+  }
+  .nav {
+    display: none;
+  }
+  .nav-bar {
+    padding: 0 10px;
+    .logo {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      div {
+        display: block;
+      }
+    }
+  }
+  .image-page {
+    flex-direction: column;
+    .sec-image {
+      img {
+        width: 100%;
+      }
+      h2 {
+        top: 50%;
+        right: 30%;
+      }
+      .img2 {
+        width: 350px;
+      }
+    }
+  }
+  .about {
+    .about-h1 {
+      width: 80%;
+      font-size: 1.5rem;
+    }
+  }
+  .expirence-section {
+    .sec-content {
+      max-width: 300px;
+      h1 {
+        font-size: 1.2rem;
+      }
+    }
+    .skills-h1 {
+      width: 80%;
+      font-size: 1.5rem;
+    }
+  }
+  .content {
+    grid-template-columns: repeat(1, 2fr);
+    gap: 5px;
+  }
+  .portfolio-contact {
+    h1 {
+      font-size: 1rem;
+    }
+    .contact-grid {
+      grid-template-columns: repeat(1, 6fr);
+    }
+  }
+  /* <-------- Resume screen ------> */
+  .resume-view {
+    height: 80vh;
+    .introduction {
+      height: 80%;
+    }
+    .qoute {
+      display: none;
+    }
+    .page-name {
+      padding: 10px;
+      font-size: 1rem;
+    }
+  }
+  .career {
+    .career-summary {
+      grid-template-columns: repeat(1, 2fr);
+    }
+  }
+
+  .profession-wrap {
+    grid-template-columns: repeat(1, 2fr);
+  }
+  .contact-info {
+    width: 100%;
+  }
+  .contact form textarea {
+    width: 70%;
+  }
+  .showcasing {
+    grid-template-columns: repeat(1, 6fr);
+  }
+  .image-carousel {
+    img {
+      width: 250px;
+    }
+  }
+  .slide-hide {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .image-page {
+    .sec-image.hide {
+      display: none;
+    }
+    .img2 {
+      width: 800px;
+    }
+  }
+  .expirence-section {
+    .skills-h1 {
+      width: 50%;
+    }
+    .content {
+      display: block;
+    }
+  }
+  .about {
+    .about-h1 {
+      width: 50%;
+    }
+  }
+  .showcasing {
+    grid-template-columns: repeat(1, 6fr);
+  }
+}
