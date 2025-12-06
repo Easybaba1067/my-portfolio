@@ -15,9 +15,8 @@ const NavBar = () => {
 
   useEffect(() => {
     setActiveNav(false);
-    window.onload = () => {
-      setIsLoading(false);
-    };
+    const timer = setTimeout(() => setIsLoading(false), 3000);
+    return () => clearTimeout(timer);
   }, [location]);
 
   useEffect(() => {
