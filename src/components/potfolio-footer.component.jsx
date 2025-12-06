@@ -5,14 +5,14 @@ const Footer = ({ targetRef }) => {
     <>
       <footer ref={targetRef} className="portfolio-contact">
         <div className="contact-form">
-          <form name="portfolio-contact" netlify>
+          <form name="portfolio-contact" netlify="true">
             <div>
-              <input name="name" type="text" required />
               <label>Name</label>
+              <input name="name" type="text" required placeholder="full name" />
             </div>
             <div>
-              <input name="email" type="email" required />
               <label>Email</label>
+              <input name="email" type="email" required placeholder="email" />
             </div>
             <div>
               <textarea

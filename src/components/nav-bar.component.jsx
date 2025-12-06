@@ -1,9 +1,11 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Logo from ".././easybaba icon.png";
+import Spinner from "./loading-model";
 import "../css-files/navbar.css";
 const NavBar = () => {
   const [activeNav, setActiveNav] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const navigator = () => {
     setActiveNav(!activeNav);
@@ -13,78 +15,87 @@ const NavBar = () => {
 
   useEffect(() => {
     setActiveNav(false);
+    window.onload = () => {
+      setIsLoading(false);
+    };
   }, [location]);
 
   useEffect(() => {
-    if (activeNav) {
+    if (activeNav || isLoading) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
     }
-    // Optional cleanup in case component unmounts
+
     return () => {
       document.body.classList.remove("no-scroll");
     };
-  }, [activeNav]);
+  }, [activeNav, isLoading]);
 
   return (
     <>
-      <div className="nav-bar">
-        <div className="logo">
-          <Link to="/">
-            <img src={Logo} alt="logo" />
-          </Link>
-          <h5>The EasyB Studio</h5>
-          <div onClick={navigator}>
-            {activeNav ? (
-              <i className="bi bi-x-lg" style={{ fontSize: "1.5rem" }}></i>
-            ) : (
-              <i className="bi bi-list" style={{ fontSize: "1.5rem" }}></i>
-            )}
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <div>
+          <div className="nav-bar">
+            <div className="logo">
+              <Link to="/">
+                <img src={Logo} alt="logo" />
+              </Link>
+              <h5>The EasyB Studio</h5>
+              <div onClick={navigator}>
+                {activeNav ? (
+                  <i className="bi bi-x-lg" style={{ fontSize: "1.5rem" }}></i>
+                ) : (
+                  <i className="bi bi-list" style={{ fontSize: "1.5rem" }}></i>
+                )}
+              </div>
+            </div>
+            <div className="nav">
+              <ul className="nav-list">
+                <Link className="nav-link" to="/">
+                  Home
+                </Link>
+
+                <Link className="nav-link" to="resume">
+                  Resume
+                </Link>
+
+                <Link className="nav-link" to="projects">
+                  Projects
+                </Link>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div className="nav">
-          <ul className="nav-list">
-            <Link className="nav-link" to="/">
-              Home
-            </Link>
 
-            <Link className="nav-link" to="resume">
-              Resume
-            </Link>
-
-            <Link className="nav-link" to="projects">
-              Projects
-            </Link>
-          </ul>
+          <div className={`mobile-navbar ${activeNav ? "" : "hidden"}`}>
+            <div className="mobile-nav">
+              <ul className="mobile-nav-list">
+                <li>
+                  <Link className="mobile-nav-link" to="/">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link className="mobile-nav-link" to="/resume">
+                    Resume
+                  </Link>
+                </li>
+                <li>
+                  <Link className="mobile-nav-link" to="/projects">
+                    Projects
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            className={`nav-overlay ${activeNav ? "open" : ""}`}
+            onClick={navigator}
+          ></div>
         </div>
-      </div>
-
-      <div className={`mobile-navbar ${activeNav ? "" : "hidden"}`}>
-        <div className="mobile-nav">
-          <ul className="mobile-nav-list">
-            <li>
-              <Link className="mobile-nav-link" to="/">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link className="mobile-nav-link" to="/resume">
-                Resume
-              </Link>
-            </li>
-            <li>
-              <Link className="mobile-nav-link" to="/projects">
-                Projects
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div
-        className={`nav-overlay ${activeNav ? "open" : ""}`}
-        onClick={navigator}
-      ></div>
+      )}
 
       <Outlet />
     </>

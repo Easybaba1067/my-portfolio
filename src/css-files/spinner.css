@@ -1,0 +1,59 @@
+.spinner-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.815);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  span {
+    background-color: aliceblue;
+  }
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  gap: 6px;
+}
+.loading span {
+  width: 4px;
+  height: 50px;
+  background-color: aqua;
+  animation: scale 0.9s ease-in-out infinite;
+}
+.loading span:nth-child(2) {
+  background-color: rgb(210, 241, 96);
+  animation-delay: -0.8s;
+}
+.loading span:nth-child(3) {
+  background-color: rgb(45, 196, 113);
+  animation-delay: -0.7s;
+}
+.loading span:nth-child(4) {
+  background-color: rgb(238, 65, 195);
+  animation-delay: -0.6s;
+}
+.loading span:nth-child(5) {
+  background-color: rgb(85, 85, 192);
+  animation-delay: -0.5s;
+}
+.loading span:nth-child(5) {
+  background-color: rgb(35, 184, 30);
+  animation-delay: -0.4s;
+}
+@keyframes scale {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.05);
+  }
+  20% {
+    transform: scaleY(1);
+  }
+}

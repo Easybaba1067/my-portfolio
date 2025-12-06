@@ -200,6 +200,11 @@
   portfolio.contact h1 {
     padding: 0.5rem;
   }
+  form {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+  }
   .contact-grid {
     margin-top: 10px;
     display: grid;
@@ -241,8 +246,11 @@
   form input {
     width: 200px;
     height: 30px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
+    margin: 5px;
+    padding: 5px 10;
+    text-align: center;
   }
   form textarea {
     width: 200px;
