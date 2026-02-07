@@ -1,8 +1,8 @@
 const Career = ({ isActive, changeBackground }) => {
   const careerStyle = {
-    fontSize: "1rem",
+    fontSize: "1.4rem",
     padding: "10px",
-    color: "darkgoldenrod",
+    color: "rgba(24, 133, 206, 0.97)",
   };
   return (
     <>
@@ -24,7 +24,6 @@ const Career = ({ isActive, changeBackground }) => {
           <div className="career-info">
             <div className="career-flex">
               <h2>Web development</h2>
-              <i className="bi bi-laptop" style={careerStyle}></i>
             </div>
 
             <div>
@@ -40,7 +39,6 @@ const Career = ({ isActive, changeBackground }) => {
           <div className="career-info">
             <div className="career-flex">
               <h2>UI/UX designing</h2>
-              <i className="bi bi-brush" style={careerStyle}></i>
             </div>
             <div>
               <p>
@@ -55,8 +53,6 @@ const Career = ({ isActive, changeBackground }) => {
           <div className="career-info">
             <div className="career-flex">
               <h2> Mobile App development</h2>
-
-              <i className="bi bi-code-slash" style={careerStyle}></i>
             </div>
             <div>
               <p>
@@ -64,21 +60,6 @@ const Career = ({ isActive, changeBackground }) => {
                 platforms. I code, test, and debug apps to ensure they are
                 functional and user-friendly. I also collaborate with designers
                 and clients to bring their app ideas to life.
-              </p>
-            </div>
-          </div>
-          <div className="career-info">
-            <div className="career-flex">
-              <h2>Database</h2>
-
-              <i className="bi bi-database" style={careerStyle}></i>
-            </div>
-            <div>
-              <p>
-                Designing, creating, and managing databases for efficient data
-                storage and retrieval. It includes planning, structuring tables,
-                ensuring security, and performing regular maintenance to support
-                performance and scalability.
               </p>
             </div>
           </div>

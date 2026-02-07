@@ -6,7 +6,7 @@ const ResumeCarousel = () => {
   const careerStyle = {
     fontSize: "3rem",
     padding: "20px",
-    color: "darkgoldenrod",
+    color: "rgba(24, 133, 206, 0.97)",
   };
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,7 +34,7 @@ const ResumeCarousel = () => {
   const handleSwipe = () => {
     if (!touchStartX.current || !touchEndX.current) return;
     const distance = touchStartX.current - touchEndX.current;
-    const threshold = 50; // Minimum swipe distance
+    const threshold = 50;
     if (distance > threshold) {
       nextBtn();
     } else if (distance < -threshold) {
@@ -87,7 +87,9 @@ const ResumeCarousel = () => {
                 height: "10px",
                 borderRadius: "50%",
                 backgroundColor:
-                  index === currentIndex ? "darkgoldenrod" : "lightgray",
+                  index === currentIndex
+                    ? "rgba(24, 133, 206, 0.97)"
+                    : "lightgray",
                 margin: "5px",
                 cursor: "pointer",
               }}

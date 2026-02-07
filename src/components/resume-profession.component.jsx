@@ -2,7 +2,7 @@ const Profession = () => {
   const myStyle = {
     fontSize: "1.5rem",
     padding: "10px",
-    color: "darkgoldenrod",
+    color: "rgba(24, 133, 206, 0.97)",
   };
   return (
     <>
@@ -11,7 +11,6 @@ const Profession = () => {
           <h1>
             Personal summary
             <i className="bi bi-person-standing" style={myStyle}></i>
-            <div className="line"></div>
           </h1>
         </div>
         <div className="profession-wrap">

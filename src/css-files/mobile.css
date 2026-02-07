@@ -8,7 +8,7 @@
     top: 6%;
     right: 0%;
     width: 60%;
-    background: linear-gradient(300deg, rgb(3, 16, 68), #83bde4);
+    background: linear-gradient(300deg, rgba(24, 133, 206, 0.97), #83bde4);
     z-index: 3;
     transition: transform 0.5s ease-in-out;
     transform: translateX(0);
@@ -51,6 +51,7 @@
   }
   .main-view {
     height: 80vh;
+    justify-content: center;
     .big-heading {
       font-size: 1.2rem;
       font-family: "Times New Roman", Times, serif;
@@ -94,15 +95,15 @@
   }
   .about {
     .about-h1 {
-      width: 80%;
+      width: 100%;
       font-size: 1.5rem;
     }
   }
   .expirence-section {
     .sec-content {
       max-width: 300px;
-      h1 {
-        font-size: 1.2rem;
+      h3 {
+        font-size: 1.3rem;
       }
     }
     .skills-h1 {
@@ -116,7 +117,7 @@
   }
   .portfolio-contact {
     h1 {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
     .contact-grid {
       grid-template-columns: repeat(1, 6fr);
@@ -124,12 +125,18 @@
   }
   /* <-------- Resume screen ------> */
   .resume-view {
-    height: 80vh;
+    height: 90vh;
     .introduction {
       height: 80%;
+      .profile-pic img {
+        width: 150px;
+        border-radius: 50%;
+      }
     }
     .qoute {
-      display: none;
+      max-width: 300px;
+      bottom: 5%;
+      left: 30px;
     }
     .page-name {
       padding: 10px;
@@ -163,7 +170,16 @@
     display: none;
   }
 }
-
+.testimony {
+  display: block;
+}
+.testimony-image img {
+  display: none;
+}
+.testimony p {
+  margin: 0;
+  padding: 0;
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   .image-page {
     .sec-image.hide {
@@ -188,5 +204,22 @@
   }
   .showcasing {
     grid-template-columns: repeat(1, 6fr);
+  }
+  .resume-view {
+    height: 70vh;
+    .introduction {
+      height: 80%;
+      .profile-pic img {
+        width: 250px;
+        border-radius: 20px;
+      }
+    }
+  }
+  .main-view {
+    height: 70vh;
+    justify-content: center;
+    .big-heading {
+      font-size: 2rem;
+    }
   }
 }

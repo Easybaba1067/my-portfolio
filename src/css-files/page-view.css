@@ -24,7 +24,7 @@
     font-family: "Courier New", Courier, monospace;
     font-size: 3rem;
     align-items: flex-start;
-    color: aquamarine;
+    color: rgba(79, 169, 230, 0.97);
     position: relative;
     z-index: 1;
   }
@@ -74,7 +74,7 @@
       white-space: nowrap;
       color: black;
       font-style: oblique;
-      background-color: goldenrod;
+      background-color: rgba(188, 212, 228, 0.973);
       position: absolute;
       top: 50%;
       right: 40%;
@@ -90,13 +90,15 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: 10px;
+  padding: 5px 20px;
   .skills-h1 {
     margin: auto;
     width: 30%;
     border-radius: 20px;
-    border: solid goldenrod 1px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-bottom: 10px;
     font-style: oblique;
     white-space: nowrap;
@@ -104,66 +106,73 @@
 }
 .content {
   display: grid;
-  grid-template-columns: repeat(2, 2fr);
+  grid-template-columns: repeat(auto-fill, 2fr);
   gap: 2rem;
   margin: auto;
-  background-color: #ffff;
-
+  padding: 5px 15px;
   .sec-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px 0;
     text-align: center;
-    background-color: rgb(15, 62, 122);
-    color: #ffff;
-    font-family: "Courier New", Courier, monospace;
     padding: 1rem;
     border-radius: 30px;
-
-    h1 {
+    border: rgba(188, 212, 228, 0.973) solid 1px;
+    box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.8);
+    transition: scale ease-in;
+    h3 {
       white-space: nowrap;
       text-align: center;
-      color: goldenrod;
-      border-radius: 20px;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      font-weight: bolder;
+      font-style: italic;
+      color: rgba(24, 133, 206, 0.97);
       padding: 5px 10px;
-      border: 2px solid goldenrod;
       margin: 0 1rem 0;
     }
-  }
-  .sec-content ul {
-    padding: 1rem 0;
-    li {
-      font-size: 1.5rem;
-      padding: 5px;
+    &:hover {
+      scale: calc(1.02);
     }
+  }
+  .sec-content p {
+    padding: 10px;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 500;
   }
 }
 .about {
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 10px 0 20px;
+  margin: 15px 0 20px;
   .about-h1 {
     margin: auto;
     width: 30%;
     border-radius: 20px;
-    border: solid goldenrod 1px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
     font-style: oblique;
     white-space: nowrap;
+    padding: 2px 5px;
   }
-  .portfolio-about-content {
+  .portfolio-about-content,
+  .mission {
     border-radius: 15px;
-    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(140deg, #1c3b2f, #278adb);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    &:hover {
+      scale: calc(1.02);
+    }
   }
   p {
     max-width: 1000px;
@@ -175,9 +184,9 @@
     margin-bottom: 10px;
     padding: 10px 15px;
     border-radius: 15px;
-    background: transparent;
-    border: solid goldenrod 2px;
-    color: #ffff;
+    border: none;
+    background-color: rgba(188, 212, 228, 0.973);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
     button {
       background-color: transparent;
     }
@@ -190,20 +199,63 @@
     outline: none;
   }
 }
+
+/* carousel css */
+
+.carousel {
+  padding: 5px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.carousel-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimony {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 1rem;
+  border: 1px rgba(24, 133, 206, 0.97) solid;
+}
+.testimony p {
+  padding: 1rem;
+  margin: 1rem;
+  max-width: 500px;
+  text-align: center;
+}
+.testimony-image {
+  text-align: center;
+}
+.testimony-image img {
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+}
+
+/* footer css */
 .portfolio-contact {
   font: sans-serif;
   text-align: center;
-  background-color: rgb(23, 46, 138);
   padding: 2rem;
-  border-radius: 20px;
-  color: #ffff;
-  portfolio.contact h1 {
+  width: 100%;
+  h1 {
     padding: 0.5rem;
+    font-family: "Times New Roman", Times, serif;
   }
   form {
+    margin: auto;
+    background-color: rgba(188, 212, 228, 0.973);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    place-content: center;
+    align-items: center;
   }
   .contact-grid {
     margin-top: 10px;
@@ -212,11 +264,9 @@
     div {
       margin: 10px;
     }
-    div,
-    p,
-    a {
-      color: #ffff;
-    }
+  }
+  a {
+    color: black;
   }
   .contact .mail {
     font-size: 1.4rem;
@@ -251,25 +301,27 @@
     margin: 5px;
     padding: 5px 10;
     text-align: center;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
   }
   form textarea {
     width: 200px;
     border-radius: 10px;
     height: 100px;
     padding: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
   }
   .send-btn {
-    background-color: darkslategray;
+    background-color: rgba(255, 255, 255, 0.973);
     border-radius: 10px;
-    border: 1px #ffff solid;
+    border: none;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
     padding: 5px;
     width: 100px;
-    color: antiquewhite;
   }
   .send-btn:hover {
     border: 1px #278adb solid;
-    background-color: #ffff;
-    color: #278adb;
+    background-color: blue;
+    color: #ffffff;
   }
   form input:focus,
   form textarea:focus,

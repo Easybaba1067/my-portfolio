@@ -3,6 +3,7 @@ import Expirence from "../components/expirence.component";
 import About from "../components/portfolio-about.component";
 import ImageSection from "../components/portfolio-image-section.component";
 import Footer from "../components/potfolio-footer.component";
+import ResumeCarousel from "../components/carousel.component";
 import React, { useRef } from "react";
 const Home = () => {
   const targetRef = useRef(null);
@@ -20,6 +21,7 @@ const Home = () => {
         head={"About The Easyb Studio"}
       />
       <Expirence />
+      <ResumeCarousel />
       <Footer targetRef={targetRef} />
     </>
   );

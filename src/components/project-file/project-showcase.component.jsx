@@ -2,7 +2,6 @@ import projects from "../../my-projects";
 import ProjectCarousel from "./projects-carousel.component";
 
 const ProjectShowcase = () => {
-  const currentYear = new Date().getFullYear();
   return (
     <>
       <section className="showcasing">
@@ -13,9 +12,6 @@ const ProjectShowcase = () => {
           </div>
         ))}
       </section>
-      <footer className="project-footer">
-        All reserved @copyright The Easyb Studio {currentYear}
-      </footer>
     </>
   );
 };

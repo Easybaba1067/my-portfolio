@@ -5,11 +5,12 @@
   text-align: center;
   margin-bottom: 2rem;
   h1 {
-    border: solid 1px rgb(23, 46, 138);
+    border: solid 1px rgba(24, 133, 206, 0.97);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
     width: 50%;
     font-style: oblique;
     font-family: "Courier New", Courier, monospace;
-    color: rgb(23, 46, 138);
+    color: rgba(24, 133, 206, 0.97);
     border-radius: 20px;
     padding: 5px;
     margin: auto;

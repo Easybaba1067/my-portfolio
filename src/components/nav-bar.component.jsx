@@ -12,6 +12,7 @@ const NavBar = () => {
   };
 
   const location = useLocation();
+  const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     setActiveNav(false);
@@ -42,7 +43,7 @@ const NavBar = () => {
               <Link to="/">
                 <img src={Logo} alt="logo" />
               </Link>
-              <h5>The EasyB Studio</h5>
+              <h4>The EasyB Studio</h4>
               <div onClick={navigator}>
                 {activeNav ? (
                   <i className="bi bi-x-lg" style={{ fontSize: "1.5rem" }}></i>
@@ -54,11 +55,11 @@ const NavBar = () => {
             <div className="nav">
               <ul className="nav-list">
                 <Link className="nav-link" to="/">
-                  Home
+                  Company
                 </Link>
 
                 <Link className="nav-link" to="resume">
-                  Resume
+                  Our Expert
                 </Link>
 
                 <Link className="nav-link" to="projects">
@@ -73,12 +74,12 @@ const NavBar = () => {
               <ul className="mobile-nav-list">
                 <li>
                   <Link className="mobile-nav-link" to="/">
-                    Home
+                    Company
                   </Link>
                 </li>
                 <li>
                   <Link className="mobile-nav-link" to="/resume">
-                    Resume
+                    Expert
                   </Link>
                 </li>
                 <li>
@@ -97,6 +98,10 @@ const NavBar = () => {
       )}
 
       <Outlet />
+
+      <footer className="footer">
+        All reserved @copyright The Easyb Studio {currentYear}
+      </footer>
     </>
   );
 };

@@ -1,131 +1,38 @@
 const Expirence = () => {
-  const myStyle = {
-    fontSize: "2rem",
-    padding: "5px",
-    color: "aqua",
-  };
   return (
     <>
       <section className="expirence-section">
         <h1 className="skills-h1">Our skills and Services </h1>
         <div className="content">
           <div className="sec-content">
-            <h1>Front-End development</h1>
-
-            <ul>
-              <li>
-                <i className="devicon-html5-plain colored" style={myStyle}></i>
-                HTML
-              </li>
-              <li>
-                <i className="devicon-css3-plain colored" style={myStyle}></i>
-                CSS
-              </li>
-              <li>
-                {" "}
-                <i
-                  className="devicon-javascript-plain colored"
-                  style={myStyle}
-                ></i>
-                javascript
-              </li>
-              <li>
-                <i
-                  className="devicon-bootstrap-plain colored"
-                  style={myStyle}
-                ></i>
-                Bootsrap
-              </li>
-              <li>
-                <i className="devicon-figma-plain colored" style={myStyle}></i>
-                Figma
-              </li>
-              <li>
-                <i className="devicon-react-plain colored" style={myStyle}></i>
-                React js
-              </li>
-              <li>
-                <i className="devicon-git-plain colored" style={myStyle}></i>
-                Git and Version control
-              </li>
-            </ul>
+            <h3>Web apps development</h3>
+            <p>
+              We offer expert website and web application development services,
+              transforming your online presence with cutting-edge technology.
+              Our team of skilled developers leverages the latest tools,
+              including HTML, CSS, JavaScript, React, Figma, Bootstrap, EJS,
+              Express, Node.js, and MongoDB, to craft bespoke solutions that
+              drive results. From custom website design and development to web
+              application development with React and Node.js, we provide a range
+              of services, including API integration and development,
+              authentication and authorization solutions, database design and
+              development with MongoDB, and UI/UX design with Figma and
+              Bootstrap.
+            </p>
           </div>
           <div className="sec-content">
-            <h1>Back-End development</h1>
-
-            <ul>
-              <li>
-                <i className="devicon-nodejs-plain colored" style={myStyle}></i>
-                Nodejs
-              </li>
-              <li>
-                <i
-                  className="devicon-express-original colored"
-                  style={myStyle}
-                ></i>
-                Expressjs
-              </li>
-              <li>
-                <i className="devicon-python-plain colored" style={myStyle}></i>
-                Python
-              </li>
-
-              <li>
-                <i className="bi bi-router" style={myStyle}></i>
-                RESTful APIs
-              </li>
-            </ul>
-          </div>
-          <div className="sec-content">
-            <h1>Database development</h1>
-
-            <ul>
-              <li>
-                <i className="devicon-mysql-plain colored" style={myStyle}></i>
-                SQL
-              </li>
-              <li>
-                <i
-                  className="devicon-mongodb-plain colored"
-                  style={myStyle}
-                ></i>
-                MongoDB
-              </li>
-              <li>
-                <i
-                  className="devicon-mongoose-original colored"
-                  style={myStyle}
-                ></i>
-                Mongoose
-              </li>
-            </ul>
-          </div>
-          <div className="sec-content">
-            <h1>Mobile development</h1>
-            <ul>
-              <li>
-                <i
-                  className="devicon-flutter-plain colored"
-                  style={myStyle}
-                ></i>
-                Flutter
-              </li>
-              <li>
-                <i className="devicon-dart-plain colored" style={myStyle}></i>
-                Dart
-              </li>
-              <li>
-                <i
-                  className="devicon-firebase-plain colored"
-                  style={myStyle}
-                ></i>
-                Firebase
-              </li>
-              <li>
-                <i className="bi bi-door-open" style={myStyle}></i>
-                Authentication
-              </li>
-            </ul>
+            <h3>Mobile apps development</h3>
+            <p>
+              We specialize in creating stunning, high-performance mobile
+              applications for Android and iOS using Flutter and Dart, with
+              Firebase as our backend. We brings your mobile app idea to life
+              with custom design and development, leveraging the power of
+              cross-platform development to reach a wider audience. We provide a
+              range of services, including Firebase integration for backend
+              services, API integration and development. With expertise in
+              Flutter and Dart, we deliver fast development and deployment,
+              beautiful native-like UI/UX, and scalable and secure solutions.
+            </p>
           </div>
         </div>
       </section>
