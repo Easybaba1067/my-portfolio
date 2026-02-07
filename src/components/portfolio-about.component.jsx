@@ -6,7 +6,7 @@ const About = ({ color, button, scrollInto, head }) => {
         <div className={color}>
           <p>
             We are a MERN Full-stack and Cross platform mobile application
-            development company with four years project based expirence, we
+            development company with great record of delivered projects, we
             possess a strong technologies in front-end design, back-end
             development, Authentication implemention and database integration,
             allowing us to effectively design and develop scalable,
