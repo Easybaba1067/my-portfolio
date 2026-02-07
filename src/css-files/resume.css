@@ -235,9 +235,9 @@ form textarea:focus {
   outline: none;
 }
 button.Btn {
-  background-color: darkgoldenrod;
+  background-color: rgba(24, 133, 206, 0.97);
   color: #ffff;
-  border: 2px solid darkgoldenrod;
+  border: 2px solid rgba(24, 133, 206, 0.97);
   padding: 0.5rem;
   max-width: 15%;
   border-radius: 10px;

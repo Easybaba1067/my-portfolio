@@ -1,11 +1,7 @@
 const Footer = ({ targetRef }) => {
-  const currentYear = new Date().getFullYear();
-
   return (
     <>
       <footer ref={targetRef} className="portfolio-contact">
-        <h1>Contact us</h1>
-
         <h1>let't work great things together</h1>
         <div className="contact-grid">
           <div className="mail">
@@ -64,9 +60,6 @@ const Footer = ({ targetRef }) => {
               </a>
             </p>
           </div>
-        </div>
-        <div className="copyright">
-          @copyright The Easyb Studio {currentYear}
         </div>
       </footer>
     </>
