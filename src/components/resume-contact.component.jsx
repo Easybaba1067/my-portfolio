@@ -14,12 +14,12 @@ const ResumeContact = () => {
             <div>
               <form name="contact" netlify="true">
                 <div>
-                  <label for="name">FULL NAME</label>
+                  <label for="name">Full name</label>
                   <input type="name" name="Name" placeholder="Name" />
                   <br />
                 </div>
                 <div>
-                  <label for="phone number">PHONE</label>
+                  <label for="phone number">Phone</label>
                   <input
                     type="phone number"
                     name="number"
@@ -28,7 +28,7 @@ const ResumeContact = () => {
                   <br />
                 </div>
                 <div>
-                  <label for="email">EMAIL</label>
+                  <label for="email">Email</label>
                   <input
                     type="email"
                     name="email"
@@ -36,7 +36,7 @@ const ResumeContact = () => {
                   />
                 </div>
                 <br />
-                <label for="message">MESSAGE</label>
+                <label for="message">Message</label>
                 <div>
                   <textarea
                     id="message"

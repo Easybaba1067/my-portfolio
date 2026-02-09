@@ -28,11 +28,13 @@ const Career = ({ isActive, changeBackground }) => {
 
             <div>
               <p>
-                As a website developer, i build and maintain websites using
-                HTML, CSS, and JavaScript for font-end and nodejs, express.js
-                EJS, APIs for back-end. You ensure sites are user-friendly,
-                visually appealing, and responsive. You work with designers and
-                clients to create functional and accessible digital experiences.
+                As a web developer, i build and maintain websites and web apps
+                using HTML, CSS, and JavaScript, React, etc for font-end and
+                uses nodejs, express.js, EJS, MongoDB, passport.js, Firebase
+                cloud and firebase auth for back-end. You ensure sites are
+                user-friendly, visually appealing, and responsive. You work with
+                designers and clients to create functional and accessible
+                digital experiences.
               </p>
             </div>
           </div>

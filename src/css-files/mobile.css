@@ -169,17 +169,18 @@
   .slide-hide {
     display: none;
   }
+  .testimony {
+    display: block;
+  }
+  .testimony-image img {
+    display: none;
+  }
+  .testimony p {
+    margin: 0;
+    padding: 0;
+  }
 }
-.testimony {
-  display: block;
-}
-.testimony-image img {
-  display: none;
-}
-.testimony p {
-  margin: 0;
-  padding: 0;
-}
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .image-page {
     .sec-image.hide {
@@ -221,5 +222,15 @@
     .big-heading {
       font-size: 2rem;
     }
+  }
+  .testimony {
+    display: block;
+  }
+  .testimony-image img {
+    display: none;
+  }
+  .testimony p {
+    margin: 0;
+    padding: 0;
   }
 }

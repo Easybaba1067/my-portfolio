@@ -200,12 +200,12 @@ a {
   text-align: center;
   font-family: "Unna", serif;
   font-style: normal;
+  padding: 0 10px;
 }
 .contact-info {
-  background: url("/public/pexels-olly-842548.jpg") no-repeat center
-    center/cover !important;
   width: 800px;
-  color: #ffff;
+  border: 1px solid rgba(24, 133, 206, 0.97);
+  box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.8);
   border-radius: 30px;
   padding: 2rem;
   div {
@@ -220,15 +220,18 @@ a {
   margin: 1.5rem;
   padding: 0.2rem;
   text-align: center;
-  border: 1px solid;
+  border: 1px solid rgba(24, 133, 206, 0.97);
+
   border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
 }
 
 .contact form textarea {
   height: 100px;
-  width: 35%;
+  width: 50%;
   border-radius: 20px;
   text-align: center;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
 }
 form input:focus,
 form textarea:focus {
@@ -239,7 +242,7 @@ button.Btn {
   color: #ffff;
   border: 2px solid rgba(24, 133, 206, 0.97);
   padding: 0.5rem;
-  max-width: 15%;
+  max-width: 20%;
   border-radius: 10px;
 }
 
