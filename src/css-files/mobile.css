@@ -62,6 +62,9 @@
       span {
         display: none;
       }
+      p {
+        font-size: 15px;
+      }
     }
   }
   .nav {
@@ -96,19 +99,27 @@
   .about {
     .about-h1 {
       width: 100%;
-      font-size: 1.5rem;
+      font-size: 1rem;
+    }
+    p {
+      font-size: 1rem;
     }
   }
   .expirence-section {
     .sec-content {
       max-width: 300px;
       h3 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
       }
     }
     .skills-h1 {
       width: 80%;
-      font-size: 1.5rem;
+      font-size: 1.1rem;
+    }
+    .sec-content p {
+      font-size: 15px;
+      font-weight: 400;
+      padding: 10px 0px;
     }
   }
   .content {
@@ -147,10 +158,27 @@
     .career-summary {
       grid-template-columns: repeat(1, 2fr);
     }
+    .career-wrap h1 {
+      font-size: 1.5rem;
+    }
+    .career-info {
+      h2 {
+        font-size: 1.4rem;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
   }
 
   .profession-wrap {
     grid-template-columns: repeat(1, 2fr);
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+  .profession h1 {
+    font-size: 1.5rem;
   }
   .contact-info {
     width: 100%;
@@ -160,6 +188,9 @@
   }
   .showcasing {
     grid-template-columns: repeat(1, 6fr);
+    h1 {
+      font-size: 1.1rem;
+    }
   }
   .image-carousel {
     img {

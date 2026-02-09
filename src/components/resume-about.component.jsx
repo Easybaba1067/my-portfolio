@@ -7,10 +7,10 @@ const ResumeAbout = () => {
           <p>
             I am full-stack web developer and Cross platform mobile application
             developer with years of project based expirence, my strong expertise
-            in front-end design, back-end development, allows me to effectively
-            design and develop scalable, user-friendly and efficient web apps
-            and mobile applications. Am confidence with my skills and proud of
-            my projects and expirence and it makes me strong.
+            in front-end designing, back-end development, allows me to
+            effectively design and develop scalable, user-friendly and efficient
+            web apps and mobile applications. Am confidence with my skills and
+            proud of my projects and expirence and it makes me strong.
           </p>
         </div>
       </section>

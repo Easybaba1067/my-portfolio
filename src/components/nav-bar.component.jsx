@@ -79,7 +79,7 @@ const NavBar = () => {
                 </li>
                 <li>
                   <Link className="mobile-nav-link" to="/resume">
-                    Expert
+                    Our expert
                   </Link>
                 </li>
                 <li>

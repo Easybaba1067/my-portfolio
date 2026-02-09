@@ -14,7 +14,7 @@ const ResumeContact = () => {
             <div>
               <form name="contact" netlify="true">
                 <div>
-                  <label for="name">Full name</label>
+                  <label for="name">Name</label>
                   <input type="name" name="Name" placeholder="Name" />
                   <br />
                 </div>
@@ -46,7 +46,7 @@ const ResumeContact = () => {
                 </div>
                 <br />
                 <button className="Btn" type="submit">
-                  send
+                  submit
                 </button>
               </form>
             </div>
