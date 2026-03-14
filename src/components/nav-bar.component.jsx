@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Logo from ".././easybaba icon.png";
 import Spinner from "./loading-model";
 import "../css-files/navbar.css";
+import MobileNav from "./navbar";
 const NavBar = () => {
   const [activeNav, setActiveNav] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -55,7 +56,7 @@ const NavBar = () => {
             <div className="nav">
               <ul className="nav-list">
                 <Link className="nav-link" to="/">
-                  Company
+                  Easyb
                 </Link>
 
                 <Link className="nav-link" to="resume">
@@ -68,32 +69,9 @@ const NavBar = () => {
               </ul>
             </div>
           </div>
+          <MobileNav isActive={activeNav} />
 
-          <div className={`mobile-navbar ${activeNav ? "" : "hidden"}`}>
-            <div className="mobile-nav">
-              <ul className="mobile-nav-list">
-                <li>
-                  <Link className="mobile-nav-link" to="/">
-                    Company
-                  </Link>
-                </li>
-                <li>
-                  <Link className="mobile-nav-link" to="/resume">
-                    Our expert
-                  </Link>
-                </li>
-                <li>
-                  <Link className="mobile-nav-link" to="/projects">
-                    Projects
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div
-            className={`nav-overlay ${activeNav ? "open" : ""}`}
-            onClick={navigator}
-          ></div>
+          {activeNav && <div className="nav-overlay" onClick={navigator}></div>}
         </div>
       )}
 

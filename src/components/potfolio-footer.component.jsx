@@ -22,7 +22,15 @@ const Footer = ({ targetRef }) => {
                 color: "rgba(24, 133, 206, 0.97)",
               }}
             ></i>
-            <p>+234-913-719-0738</p>
+            <p>
+              <a
+                href="https://wa.me/234917190738"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                +234-913-719-0738
+              </a>
+            </p>
           </div>
           <div className="linkedin">
             <i

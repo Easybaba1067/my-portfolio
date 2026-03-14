@@ -1,6 +1,3 @@
-.mobile-navbar {
-  display: none;
-}
 .nav-bar {
   padding: 0 10px;
   font-family: "Courier New", Courier, monospace;
@@ -9,7 +6,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   ul {
     padding: 10px;
   }
@@ -42,4 +38,48 @@
 .nav-link:hover {
   background-color: blue;
   color: aliceblue;
+}
+.nav-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+/* ------ mobile nav bar ----- */
+
+.mobile-navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: fixed;
+  left: -400px;
+  height: 100vh;
+  border-radius: 0 20px 20px 0;
+  background: linear-gradient(300deg, rgba(79, 169, 230, 0.97), #83bde4);
+  z-index: 999;
+  transition: left 0.3s ease-in-out;
+}
+.mobile-navbar.active {
+  left: 0;
+}
+.nav-footer {
+  padding: 10px 20px;
+  place-items: center;
+  div {
+    padding: 10px;
+    place-items: center;
+    a {
+      color: #ffff;
+    }
+  }
+  .mail,
+  .number,
+  .facebook,
+  .linkedin {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #ffff;
+  }
 }

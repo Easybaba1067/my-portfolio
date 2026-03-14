@@ -12,7 +12,18 @@ const ResumeContact = () => {
               ></i>
             </h1>
             <div>
-              <form name="contact" netlify="true">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <p hidden>
+                  <label>
+                    Don't fill this out: <input name="bot-field" />
+                  </label>
+                </p>
                 <div>
                   <label for="name">Name</label>
                   <input type="name" name="Name" placeholder="Name" />
