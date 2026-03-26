@@ -1,6 +1,26 @@
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 const ProjectCarousel = ({ images, title }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [visible, setVisible] = useState(false);
+  const carouselRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 },
+    );
+
+    if (carouselRef.current) observer.observe(carouselRef.current);
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -12,7 +32,11 @@ const ProjectCarousel = ({ images, title }) => {
   const image = images[currentIndex];
   return (
     <>
-      <div className="image-carousel" key={title}>
+      <div
+        ref={carouselRef}
+        className={`image-carousel ${visible ? "slide-in" : ""}`}
+        key={title}
+      >
         <img src={image} alt={title.replace(/_/g, " ")} />
       </div>
     </>

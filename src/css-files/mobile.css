@@ -2,20 +2,18 @@
   .mobile-nav {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     ul {
       display: flex;
       flex-direction: column;
-      padding: 5px 20px;
+      padding: 0px 20px;
       li {
         padding: 10px 10px;
         border-radius: 15px;
-        margin: 20px;
+        margin: 5px 0;
         text-align: center;
-        background-color: rgba(255, 255, 255, 0.973);
+        background-color: rgba(49, 49, 49, 0.973);
         a {
-          color: black;
+          color: #ffff;
         }
       }
     }

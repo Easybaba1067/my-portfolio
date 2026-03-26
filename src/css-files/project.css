@@ -16,11 +16,33 @@
     margin: auto;
   }
 }
+.showcasing h1 {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    transform 0.8s ease-out,
+    opacity 0.8s ease-out;
+}
+
+.showcasing h1.slide-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .image-carousel {
   margin: 2rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    transform 0.8s ease-out,
+    opacity 0.8s ease-out;
   img {
     width: 400px;
   }
+}
+.image-carousel.slide-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 .project-footer {
   text-align: center;

@@ -57,7 +57,7 @@
   left: -400px;
   height: 100vh;
   border-radius: 0 20px 20px 0;
-  background: linear-gradient(300deg, rgba(79, 169, 230, 0.97), #83bde4);
+  background-color: rgb(255, 255, 255);
   z-index: 999;
   transition: left 0.3s ease-in-out;
 }
@@ -71,7 +71,7 @@
     padding: 10px;
     place-items: center;
     a {
-      color: #ffff;
+      color: #333;
     }
   }
   .mail,
@@ -80,6 +80,6 @@
   .linkedin {
     font-size: 0.8rem;
     text-align: center;
-    color: #ffff;
+    color: #333;
   }
 }

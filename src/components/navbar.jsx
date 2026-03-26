@@ -30,7 +30,7 @@ const MobileNav = ({ isActive }) => {
               className="devicon-linkedin-plain colored"
               style={{
                 fontSize: "1.5rem",
-                color: "#ffff",
+                color: "#333",
               }}
             ></i>
             <p>
@@ -48,7 +48,7 @@ const MobileNav = ({ isActive }) => {
               className="devicon-facebook-plain colored"
               style={{
                 fontSize: "1.5rem",
-                color: "#ffff",
+                color: "#333",
               }}
             ></i>
             <p>
@@ -66,7 +66,7 @@ const MobileNav = ({ isActive }) => {
               className="devicon-google-plain colored"
               style={{
                 fontSize: "1.5rem",
-                color: "#ffff",
+                color: "#333",
               }}
             ></i>
             <p>theeasybstudio@gmail.com</p>
@@ -76,7 +76,7 @@ const MobileNav = ({ isActive }) => {
               className="bi bi-whatsapp"
               style={{
                 fontSize: "1.5rem",
-                color: "#ffff",
+                color: "#333",
               }}
             ></i>
             <p>

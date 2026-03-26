@@ -62,11 +62,17 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+      transform 0.8s ease-out,
+      opacity 0.8s ease-out;
     img {
       width: 620px;
       border-radius: 20px;
       margin: 5px;
     }
+
     .img2 {
       width: 700px;
     }
@@ -81,6 +87,10 @@
       padding: 8px;
       border-radius: 20px;
     }
+  }
+  .sec-image.slide-in {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -104,6 +114,23 @@
     white-space: nowrap;
   }
 }
+.skills-h1,
+.sec-content h3,
+.sec-content p {
+  opacity: 0;
+  transform: translateY(40px); /* start slightly below */
+  transition:
+    transform 0.8s ease-out,
+    opacity 0.8s ease-out;
+}
+
+.skills-h1.slide-in,
+.sec-content h3.slide-in,
+.sec-content p.slide-in {
+  opacity: 1;
+  transform: translateY(0); /* slide into place */
+}
+
 .content {
   display: grid;
   grid-template-columns: repeat(auto-fill, 2fr);
@@ -198,6 +225,20 @@
   .portfolio-btn:focus {
     outline: none;
   }
+}
+.about-h1,
+.about p {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    transform 0.8s ease-out,
+    opacity 0.8s ease-out;
+}
+
+.about-h1.slide-in,
+.about p.slide-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* carousel css */
@@ -331,4 +372,18 @@
   .copyright {
     padding: 1rem;
   }
+}
+.portfolio-contact h1,
+.contact-grid div {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    transform 0.8s ease-out,
+    opacity 0.8s ease-out;
+}
+
+.portfolio-contact h1.slide-in,
+.contact-grid div.slide-in {
+  opacity: 1;
+  transform: translateY(0);
 }

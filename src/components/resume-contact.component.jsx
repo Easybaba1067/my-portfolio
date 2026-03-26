@@ -1,8 +1,33 @@
+import { useEffect, useRef, useState } from "react";
+
 const ResumeContact = () => {
+  const [visible, setVisible] = useState(false);
+  const contactRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 },
+    );
+
+    if (contactRef.current) observer.observe(contactRef.current);
+
+    return () => observer.disconnect();
+  });
   return (
     <>
       <section id="contact">
-        <div className="contact">
+        <div
+          ref={contactRef}
+          className={`contact ${visible ? "slide-in" : ""}`}
+        >
           <div className="contact-info">
             <h1>
               Contact

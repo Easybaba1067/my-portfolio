@@ -79,23 +79,23 @@ a {
     background: rgba(23, 35, 37, 0.58);
   }
 }
-
 .resume-about-content {
-  padding: 5px 0;
-  display: none;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.8);
-  border: solid 1px rgba(188, 212, 228, 0.973);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
+.resume-about-content:hover {
+  scale: calc(1.02);
+}
 .resume-btn:hover {
   background-color: #ffff;
   color: goldenrod;
 }
+
 .career-summary {
   display: grid;
   grid-template-columns: repeat(auto-fill, 2fr);
@@ -136,6 +136,23 @@ a {
   margin: 5px;
   border-radius: 50%;
 }
+.career h1,
+.career h2,
+.career p {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    transform 0.8s ease-out,
+    opacity 0.8s ease-out;
+}
+
+.career h1.slide-in,
+.career h2.slide-in,
+.career p.slide-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .theme.active .mode1 {
   display: block;
 }
@@ -166,6 +183,15 @@ a {
   max-width: 1000px;
   margin: auto;
   padding: 3rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    transform 0.8s ease-out,
+    opacity 0.8s ease-out;
+}
+.profession.slide-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 .profession h1 {
   font-family: "Unna", serif;
@@ -201,6 +227,15 @@ a {
   font-family: "Unna", serif;
   font-style: normal;
   padding: 0 10px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    transform 0.8s ease-out,
+    opacity 0.8s ease-out;
+}
+.contact.slide-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 .contact-info {
   background-color: rgba(115, 158, 187, 0.973);

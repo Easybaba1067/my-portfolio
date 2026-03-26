@@ -1,12 +1,44 @@
+import { useEffect, useRef, useState } from "react";
+
 const Profession = () => {
   const myStyle = {
     fontSize: "1.5rem",
     padding: "10px",
     color: "rgba(24, 133, 206, 0.97)",
   };
+
+  const [visible, setVisible] = useState({});
+  const refs = {
+    section: useRef(null),
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible((prev) => ({
+              ...prev,
+              [entry.target.dataset.id]: true,
+            }));
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 },
+    );
+
+    if (refs.section.current) observer.observe(refs.section.current);
+
+    return () => observer.disconnect();
+  });
   return (
     <>
-      <section className="profession">
+      <section
+        ref={refs.section}
+        data-id="section"
+        className={`profession ${visible["section"] ? "slide-in" : ""}`}
+      >
         <div className="headings">
           <h1>
             Personal summary
