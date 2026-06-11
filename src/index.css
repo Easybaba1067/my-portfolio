@@ -15,6 +15,11 @@ body {
 body.active {
   background-color: #121212;
   color: aliceblue;
+  footer {
+    a {
+      color: aliceblue;
+    }
+  }
 }
 code {
   font-family:
