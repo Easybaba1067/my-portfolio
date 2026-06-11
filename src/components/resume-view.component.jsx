@@ -3,13 +3,14 @@ import "../css-files/resume.css";
 const ResumeView = () => {
   return (
     <div className="resume-view">
-      <div className="resume-overlay"></div>
       <div className="introduction">
         <div className="profile-pic">
           <img src="/IMG-20221106-WA0001.jpg" alt="profile" />
         </div>
         <div>
-          <h1>i'm Oluwole Israel</h1>
+          <h1>
+            i'm <span className="highlight">Oluwole Israel</span>
+          </h1>
           <h2>MERN Full-Stack web developer</h2>
           <h2>Mobile application developer</h2>
         </div>

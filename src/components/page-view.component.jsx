@@ -13,7 +13,6 @@ const MainView = () => {
   return (
     <>
       <div className="main-view">
-        <div className="page-overlay"></div>
         <h1 ref={pageTitle} className="big-heading highlight">
           Welcome to The Easyb Studio
         </h1>

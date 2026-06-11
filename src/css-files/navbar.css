@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   ul {
-    padding: 10px;
+    padding: 0 10px;
   }
 }
 .logo {
@@ -23,7 +23,31 @@
   align-items: center;
   color: rgba(0, 0, 0, 0.815);
 }
+.theme {
+  border: 1px solid rgba(188, 212, 228, 0.973);
+  border-radius: 20px;
+  margin: auto;
+  background-color: #333;
+}
+.theme.theme.active {
+  background-color: #fff;
+}
+.theme.active .mode1 {
+  display: block;
+}
+.theme .mode1 {
+  display: none;
+}
+.theme.active .mode2 {
+  display: none;
+}
+.theme .mode2 {
+  display: block;
+}
 
+.nav-list {
+  display: flex;
+}
 .nav-link {
   text-decoration: none;
   margin: 10px;
@@ -60,6 +84,7 @@
   background-color: rgb(255, 255, 255);
   z-index: 999;
   transition: left 0.3s ease-in-out;
+  overflow-y: auto;
 }
 .mobile-navbar.active {
   left: 0;

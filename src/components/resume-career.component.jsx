@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const Career = ({ isActive, changeBackground }) => {
+const Career = () => {
   const [visible, setVisible] = useState({});
   const refs = {
     h1: useRef(null),
@@ -52,13 +52,8 @@ const Career = ({ isActive, changeBackground }) => {
           what i do <i className="bi bi-briefcase" style={careerStyle}></i>
           <div className="line"></div>
         </h1>
-        <div
-          onClick={changeBackground}
-          className={isActive ? "theme active" : "theme"}
-        >
-          <i className="mode1 bi bi-sun" style={careerStyle}></i>
-          <i className="mode2 bi bi-moon" style={careerStyle}></i>
-        </div>
+
+        <span></span>
       </div>
 
       <div className="career-summary">

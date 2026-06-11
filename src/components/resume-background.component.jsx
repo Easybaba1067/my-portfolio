@@ -2,18 +2,13 @@ import ResumeAbout from "../components/resume-about.component";
 import Career from "../components/resume-career.component";
 import Profession from "../components/resume-profession.component";
 import ResumeContact from "./resume-contact.component";
-import { useState } from "react";
-const Background = () => {
-  const [isActive, setIsActive] = useState(false);
-  const changeBackground = () => {
-    setIsActive(!isActive);
-  };
 
+const Background = () => {
   return (
     <>
-      <div className={isActive ? "background active" : "background"}>
+      <div className="background">
         <ResumeAbout />
-        <Career isActive={isActive} changeBackground={changeBackground} />
+        <Career />
         <Profession />
 
         <ResumeContact />

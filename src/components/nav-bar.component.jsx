@@ -7,6 +7,15 @@ import MobileNav from "./navbar";
 const NavBar = () => {
   const [activeNav, setActiveNav] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [isBlack, setIsBlack] = useState(false);
+  const changeBackground = () => {
+    setIsBlack(!isBlack);
+    if (!isBlack) {
+      document.body.classList.add("active");
+    } else {
+      document.body.classList.remove("active");
+    }
+  };
 
   const navigator = () => {
     setActiveNav(!activeNav);
@@ -33,6 +42,11 @@ const NavBar = () => {
     };
   }, [activeNav, isLoading]);
 
+  const careerStyle = {
+    fontSize: "0.8rem",
+    padding: "10px",
+    color: "rgba(24, 133, 206, 0.97)",
+  };
   return (
     <>
       {isLoading ? (
@@ -44,7 +58,7 @@ const NavBar = () => {
               <Link to="/">
                 <img src={Logo} alt="logo" />
               </Link>
-              <h4>The EasyB Studio</h4>
+              <h4>The EasyB Studios</h4>
               <div onClick={navigator}>
                 {activeNav ? (
                   <i className="bi bi-x-lg" style={{ fontSize: "1.5rem" }}></i>
@@ -53,8 +67,17 @@ const NavBar = () => {
                 )}
               </div>
             </div>
+
             <div className="nav">
               <ul className="nav-list">
+                <div
+                  onClick={changeBackground}
+                  className={isBlack ? "theme active" : "theme"}
+                >
+                  <i className="mode1 bi bi-sun" style={careerStyle}></i>
+
+                  <i className="mode2 bi bi-moon" style={careerStyle}></i>
+                </div>
                 <Link className="nav-link" to="/">
                   Easyb
                 </Link>

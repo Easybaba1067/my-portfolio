@@ -1,7 +1,17 @@
 import { Link } from "react-router-dom";
 import "../css-files/navbar.css";
+import { useState } from "react";
 
 const MobileNav = ({ isActive }) => {
+  const [isBlack, setIsBlack] = useState(false);
+  const changeBackground = () => {
+    setIsBlack(!isBlack);
+  };
+  const careerStyle = {
+    fontSize: "0.8rem",
+    padding: "10px",
+    color: "rgba(24, 133, 206, 0.97)",
+  };
   return (
     <>
       <div className={`mobile-navbar ${isActive ? "active" : ""}`}>
@@ -22,6 +32,13 @@ const MobileNav = ({ isActive }) => {
                 Projects
               </Link>
             </li>
+            <div
+              onClick={changeBackground}
+              className={isBlack ? "theme active" : "theme"}
+            >
+              <i className="mode1 bi bi-sun" style={careerStyle}></i>
+              <i className="mode2 bi bi-moon" style={careerStyle}></i>
+            </div>
           </ul>
         </div>
         <div className="nav-footer">

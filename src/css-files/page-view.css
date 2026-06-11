@@ -1,5 +1,5 @@
 .main-view {
-  background: url("/public/pexels-daan-stevens-66128-939331.jpg") center
+  background: url("/public/vadim-artyukhin-7yIrWv-QqFc-unsplash.jpg") center
     center/cover no-repeat;
   position: relative;
   height: 90vh;
@@ -39,15 +39,6 @@
   }
   .header-text.active {
     transform: translateX(0px);
-  }
-
-  .page-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(23, 35, 37, 0.58);
   }
 }
 .image-page {
