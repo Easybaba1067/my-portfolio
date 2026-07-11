@@ -41,6 +41,11 @@
   .header-text {
     transform: translateY(700px);
     font-size: 0.95rem;
+    p {
+      span{
+        display: none;
+      }
+    }
   }
 
   .image-page {

@@ -21,10 +21,10 @@ const MainView = () => {
             "Welcome to The Easyb Studio, your premier destination for expert
             Software development solutions. As a Software Company with skilled
             developers, and passion for innovation and creativity, we specialize
-            in crafting bespoke digital experiences that drive real results.
-            With a keen eye for detail and a commitment to excellence, we bring
-            your vision to life through responsive, user-friendly, and visually
-            stunning Software applications.
+            in crafting bespoke digital experiences that drive real results. We
+            work with startups, entrepreneurs, and companies to turn ideas into
+            MVPs powerful digital products that engage users and deliver
+            results.
             <span>
               Whether you're looking to establish a strong online presence,
               enhance your existing website, or leverage the latest Software

@@ -9,12 +9,11 @@ const NavBar = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isBlack, setIsBlack] = useState(false);
   const changeBackground = () => {
-    setIsBlack(!isBlack);
-    if (!isBlack) {
-      document.body.classList.add("active");
-    } else {
-      document.body.classList.remove("active");
-    }
+    setIsBlack((prev) => {
+      const next = !prev;
+      document.body.classList.toggle("active", next);
+      return next;
+    });
   };
 
   const navigator = () => {
@@ -91,7 +90,7 @@ const NavBar = () => {
               </ul>
             </div>
           </div>
-          <MobileNav isActive={activeNav} />
+          <MobileNav isActive={activeNav} isBlack={isBlack} changeBackground={changeBackground} />
 
           {activeNav && <div className="nav-overlay" onClick={navigator}></div>}
         </div>
