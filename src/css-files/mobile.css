@@ -49,7 +49,7 @@
   }
 
   .image-page {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     padding: 48px 16px;
   }
 
@@ -109,11 +109,11 @@
   }
 
   .slide-hide {
-    display: none;
+    display: none !important;
   }
 
   .testimony {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     padding: 24px;
     text-align: center;
   }
@@ -260,7 +260,7 @@
   }
 
   .image-page {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .sec-image .img1,
@@ -273,7 +273,7 @@
   }
 
   .testimony {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     text-align: center;
   }
 
