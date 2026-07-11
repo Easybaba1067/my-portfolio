@@ -1,27 +1,89 @@
 .showcasing {
-  width: 100vw;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 6fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: clamp(20px, 3vw, 32px);
   text-align: center;
-  margin-bottom: 2rem;
-  h1 {
-    border: solid 1px rgba(24, 133, 206, 0.97);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    width: 50%;
-    font-style: oblique;
-    font-family: "Courier New", Courier, monospace;
-    color: rgba(24, 133, 206, 0.97);
-    border-radius: 20px;
-    padding: 5px;
-    margin: auto;
-  }
+  padding: clamp(40px, 6vw, 80px) clamp(16px, 4vw, 48px);
+  background: var(--bg);
 }
+
+.showcasing > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--t-base) var(--ease-out),
+    box-shadow var(--t-base) var(--ease-out),
+    border-color var(--t-base) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.showcasing > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--grad-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--t-base) var(--ease-out);
+}
+
+.showcasing > div:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--brand-200);
+}
+
+.showcasing > div:hover::before {
+  transform: scaleX(1);
+}
+
+.showcasing h1 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: -0.01em;
+  width: auto;
+  background: none;
+  color: var(--text);
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+  position: relative;
+  display: inline-block;
+}
+
+.showcasing h1::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: var(--grad-primary);
+  border-radius: 999px;
+  margin: 8px auto 0;
+}
+
 .showcasing h1 {
   opacity: 0;
   transform: translateY(40px);
   transition:
-    transform 0.8s ease-out,
-    opacity 0.8s ease-out;
+    transform 0.8s var(--ease-out),
+    opacity 0.8s var(--ease-out);
 }
 
 .showcasing h1.slide-in {
@@ -30,24 +92,55 @@
 }
 
 .image-carousel {
-  margin: 2rem;
+  margin: 0;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--surface-2);
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   opacity: 0;
   transform: translateY(40px);
   transition:
-    transform 0.8s ease-out,
-    opacity 0.8s ease-out;
-  img {
-    width: 400px;
-  }
+    transform 0.8s var(--ease-out),
+    opacity 0.8s var(--ease-out);
 }
+
+.image-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--r-lg);
+  transition: transform 1.2s var(--ease-out);
+}
+
+.showcasing > div:hover .image-carousel img {
+  transform: scale(1.04);
+}
+
+.image-carousel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(7, 14, 31, 0.45) 100%);
+  pointer-events: none;
+}
+
 .image-carousel.slide-in {
   opacity: 1;
   transform: translateY(0);
 }
+
 .project-footer {
   text-align: center;
-  background-color: rgb(148, 186, 230);
-  padding: 5px 10px;
-  border-radius: 10px;
-  margin-top: 10px;
+  background: var(--grad-primary);
+  color: #fff;
+  padding: 16px 20px;
+  border-radius: 0;
+  margin: 0;
+  font-family: var(--ff-display);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
 }

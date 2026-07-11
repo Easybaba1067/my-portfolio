@@ -1,4 +1,24 @@
 const projects = {
+  ShipTrack: [
+    "/shiptrack/1.jpeg",
+    "/shiptrack/2.jpeg",
+    "/shiptrack/3.jpeg",
+    "/shiptrack/4.jpeg",
+    "/shiptrack/5.jpeg",
+  ],
+  Crownivext: [
+    "/crowninvext/1.jpeg",
+    "/crowninvext/2.jpeg",
+    "/crowninvext/3.jpeg",
+    "/crowninvext/4.jpeg",
+  ],
+  Royal_Liberty_School: [
+    "/royallib/1.jpeg",
+    "/royallib/2.jpeg",
+    "/royallib/3.jpeg",
+    "/royallib/4.jpeg",
+    "/royallib/5.jpeg",
+  ],
   Wayhacks: [
     "/wayhacks/1.png",
     "/wayhacks/2.png",

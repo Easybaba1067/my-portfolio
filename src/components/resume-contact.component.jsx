@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 const ResumeContact = () => {
   const [visible, setVisible] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const contactRef = useRef(null);
 
   useEffect(() => {
@@ -21,6 +22,11 @@ const ResumeContact = () => {
 
     return () => observer.disconnect();
   });
+
+  const handleSubmit = (e) => {
+    setTimeout(() => setSubmitted(true), 50);
+  };
+
   return (
     <>
       <section id="contact">
@@ -37,54 +43,73 @@ const ResumeContact = () => {
               ></i>
             </h1>
             <div>
-              <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-              >
-                <input type="hidden" name="form-name" value="contact" />
-                <p hidden>
-                  <label>
-                    Don't fill this out: <input name="bot-field" />
-                  </label>
-                </p>
-                <div>
-                  <label for="name">Name</label>
-                  <input type="name" name="Name" placeholder="Name" />
-                  <br />
+              {submitted ? (
+                <div className="contact-success" role="status">
+                  <i
+                    className="bi bi-check-circle-fill"
+                    style={{ fontSize: "2rem", color: "#10b981" }}
+                  ></i>
+                  <p>
+                    Thanks for reaching out! Your message has been sent
+                    successfully — I'll get back to you shortly.
+                  </p>
                 </div>
-                <div>
-                  <label for="phone number">Phone</label>
-                  <input
-                    type="phone number"
-                    name="number"
-                    placeholder="Phone number"
-                  />
-                  <br />
-                </div>
-                <div>
-                  <label for="email">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email address"
-                  />
-                </div>
-                <br />
-                <label for="message">Message</label>
-                <div>
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Message"
-                  ></textarea>
-                </div>
-                <br />
-                <button className="Btn" type="submit">
-                  submit
-                </button>
-              </form>
+              ) : (
+                <form
+                  name="contact"
+                  method="POST"
+                  action="/"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p hidden>
+                    <label>
+                      Don't fill this out: <input name="bot-field" />
+                    </label>
+                  </p>
+                  <div>
+                    <label for="name">Name</label>
+                    <input
+                      type="text"
+                      name="Name"
+                      placeholder="Name"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label for="phone number">Phone</label>
+                    <input
+                      type="tel"
+                      name="number"
+                      placeholder="Phone number"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email address"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label for="message">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+                  <button className="Btn" type="submit">
+                    submit
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </div>

@@ -20,7 +20,6 @@ const NavBar = () => {
   const navigator = () => {
     setActiveNav(!activeNav);
   };
-
   const location = useLocation();
   const currentYear = new Date().getFullYear();
 

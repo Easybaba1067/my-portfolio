@@ -1,27 +1,260 @@
+/* ===== Design Tokens ===== */
+:root {
+  /* Brand */
+  --brand-50: #ecf6ff;
+  --brand-100: #d6ecff;
+  --brand-200: #b3dcff;
+  --brand-300: #7fc3ff;
+  --brand-400: #4aa6fb;
+  --brand-500: #2189eb; /* primary */
+  --brand-600: #166fc7;
+  --brand-700: #0e57a0;
+  --brand-800: #0a4180;
+  --brand-900: #072e5e;
+
+  /* Accents */
+  --accent-violet: #7c5cff;
+  --accent-cyan: #22d3ee;
+  --accent-amber: #f59e0b;
+  --accent-pink: #ec4899;
+  --accent-emerald: #10b981;
+
+  /* Surfaces (light) */
+  --bg: #f6f8fc;
+  --bg-elev: #ffffff;
+  --bg-soft: #eef3fb;
+  --surface: #ffffff;
+  --surface-2: #f4f7fc;
+  --surface-3: #eaf0f8;
+
+  /* Text (light) */
+  --text: #0b1220;
+  --text-muted: #4a5568;
+  --text-subtle: #6b7280;
+  --text-invert: #f8fafc;
+
+  /* Borders & lines */
+  --border: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(15, 23, 42, 0.16);
+  --divider: rgba(15, 23, 42, 0.06);
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12);
+  --shadow-glow: 0 12px 40px rgba(33, 137, 235, 0.25);
+
+  /* Radii */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-2xl: 36px;
+  --r-pill: 999px;
+
+  /* Spacing scale */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+
+  /* Type */
+  --ff-sans: "Inter", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --ff-display: "Plus Jakarta Sans", "Space Grotesk", "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --ff-mono: "Space Grotesk", "Courier New", Courier, monospace;
+  --ff-serif: "Plus Jakarta Sans", "Times New Roman", Times, serif;
+
+  /* Gradients */
+  --grad-primary: linear-gradient(135deg, #2189eb 0%, #7c5cff 100%);
+  --grad-soft: linear-gradient(135deg, #ecf6ff 0%, #f3eaff 100%);
+  --grad-hero: radial-gradient(
+      1200px 600px at 20% 10%,
+      rgba(33, 137, 235, 0.18),
+      transparent 60%
+    ),
+    radial-gradient(
+      1000px 500px at 90% 20%,
+      rgba(124, 92, 255, 0.16),
+      transparent 60%
+    ),
+    radial-gradient(
+      800px 500px at 50% 90%,
+      rgba(34, 211, 238, 0.12),
+      transparent 60%
+    );
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --t-fast: 160ms;
+  --t-base: 260ms;
+  --t-slow: 520ms;
+}
+
+/* Dark theme overrides */
+body.active {
+  --bg: #07090f;
+  --bg-elev: #0e121b;
+  --bg-soft: #0a0d15;
+  --surface: #11151f;
+  --surface-2: #161b27;
+  --surface-3: #1c2230;
+
+  --text: #f1f5f9;
+  --text-muted: #cbd5e1;
+  --text-subtle: #94a3b8;
+  --text-invert: #0b1220;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --divider: rgba(255, 255, 255, 0.06);
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.55);
+  --shadow-glow: 0 16px 50px rgba(33, 137, 235, 0.45);
+
+  --grad-soft: linear-gradient(135deg, #0e1729 0%, #161430 100%);
+  --grad-hero: radial-gradient(
+      1200px 600px at 20% 10%,
+      rgba(33, 137, 235, 0.28),
+      transparent 60%
+    ),
+    radial-gradient(
+      1000px 500px at 90% 20%,
+      rgba(124, 92, 255, 0.22),
+      transparent 60%
+    ),
+    radial-gradient(
+      800px 500px at 50% 90%,
+      rgba(34, 211, 238, 0.16),
+      transparent 60%
+    );
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   position: relative;
   margin: 0;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--ff-sans);
+  color: var(--text);
+  background-color: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition:
+    background-color var(--t-base) var(--ease-out),
+    color var(--t-base) var(--ease-out);
 }
+
 body.active {
-  background-color: #121212;
-  color: aliceblue;
   footer {
     a {
-      color: aliceblue;
+      color: var(--text-invert);
     }
   }
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--brand-500);
+  color: #fff;
+}
+
 code {
-  font-family:
-    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* ===== Reusable utilities ===== */
+.highlight {
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.section {
+  padding: clamp(48px, 8vw, 96px) clamp(16px, 4vw, 48px);
+  position: relative;
+}
+
+.section-title {
+  font-family: var(--ff-display);
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto 32px;
+  padding-bottom: 12px;
+  position: relative;
+  text-align: center;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 64px;
+  border-radius: 999px;
+  background: var(--grad-primary);
+}
+
+.eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--brand-500);
+  background: var(--brand-50);
+  padding: 6px 14px;
+  border-radius: var(--r-pill);
+  margin-bottom: 16px;
+}
+
+body.active .eyebrow {
+  background: rgba(33, 137, 235, 0.15);
+  color: var(--brand-300);
+}
+
+/* Scroll-in animation baseline (used by components) */
+.slide-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
