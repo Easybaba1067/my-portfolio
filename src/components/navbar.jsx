@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../css-files/navbar.css";
+
 import "../css-files/mobile.css";
 
 const MobileNav = ({ isActive, isBlack, changeBackground }) => {
