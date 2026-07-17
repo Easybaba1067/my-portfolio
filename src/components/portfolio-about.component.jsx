@@ -47,12 +47,13 @@ const About = ({ color, button, scrollInto, head }) => {
           data-id="p_1"
           className={`${visible["p_1"] ? "slide-in" : ""}`}
         >
-          We are a MERN Full-stack Web and Cross platform mobile application
-          development company with great record of delivered projects, we
-          possess a strong technologies in front-end development, back-end
-          development, Authentication implemention and database integration,
-          allowing us to effectively design and develop scalable, user-friendly
-          and efficient web apps and mobile applications.
+          We help businesses build fast, secure, and scalable digital solutions
+          that solve real-world challenges. From high-performing websites and
+          web applications to cross-platform mobile apps, we handle everything
+          from intuitive user interfaces and powerful backend systems to secure
+          authentication and seamless database integration. Every solution we
+          create is designed to improve efficiency, enhance user experience, and
+          support long-term business growth.
         </p>
       </div>
 
@@ -70,12 +71,10 @@ const About = ({ color, button, scrollInto, head }) => {
             data-id="p_2"
             className={`${visible["p_2"] ? "slide-in" : ""}`}
           >
-            Our goal is to turn your applications idea into a reality, and we're
-            committed to providing exceptional service and support throughout
-            the development process. Our passion for innovation and commitment
-            to excellent drive me to stay up-to-date with industry trends and
-            best practices, we have worked on so many projects and delivered a
-            good design and responsive apps.
+            We turn your ideas into scalable, user-friendly digital solutions
+            that solve real business problems. From planning to launch, we build
+            high-quality websites, web apps, and mobile apps designed to help
+            your business grow.
           </p>
         </div>
       </div>

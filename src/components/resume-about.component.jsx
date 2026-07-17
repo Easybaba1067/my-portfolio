@@ -45,12 +45,12 @@ const ResumeAbout = () => {
           data-id="p"
           className={`${visible["p"] ? "slide-in" : ""}`}
         >
-          I am full-stack web developer and Cross platform mobile application
-          developer with years of project based expirence, my strong expertise
-          in front-end designing, back-end development, allows me to effectively
-          design and develop scalable, user-friendly and efficient web apps and
-          mobile applications. Am confidence with my skills and proud of my
-          projects and expirence and it makes me strong.
+          I'm a full-stack web and cross-platform mobile app developer focused
+          on solving real business problems with technology. I build fast,
+          scalable, and user-friendly digital products that are designed to
+          perform, grow with your business, and deliver lasting value. Every
+          project is backed by practical experience, attention to detail, and a
+          commitment to quality.
         </p>
       </div>
     </section>

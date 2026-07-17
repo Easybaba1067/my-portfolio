@@ -72,12 +72,12 @@ const Career = () => {
             data-id="p_1"
             className={`${visible["p_1"] ? "slide-in" : ""}`}
           >
-            As a web developer, i build and maintain websites and web apps using
-            HTML, CSS, and JavaScript, React, etc for font-end and uses nodejs,
-            express.js, EJS, MongoDB, passport.js, Firebase cloud and firebase
-            auth for back-end. You ensure sites are user-friendly, visually
-            appealing, and responsive. You work with designers and clients to
-            create functional and accessible digital experiences.
+            I build fast, secure, and responsive websites and web applications
+            that help businesses grow. From intuitive user interfaces to
+            powerful backend systems, I create scalable solutions with seamless
+            authentication, API integration, and database management—delivering
+            digital experiences that are reliable, user-friendly, and built for
+            performance.
           </p>
         </div>
 

@@ -57,16 +57,12 @@ const Expirence = () => {
             data-id="p_1"
             className={`${visible["p_1"] ? "slide-in" : ""}`}
           >
-            We offer expert website and web application development services,
-            transforming your online presence with cutting-edge technology. Our
-            team of skilled developers leverages the latest tools, including
-            HTML, CSS, JavaScript, React, Figma, Bootstrap, EJS, Express,
-            Node.js, and MongoDB, to craft bespoke solutions that drive results.
-            From custom website design and development to web application
-            development with React and Node.js, we provide a range of services,
-            including API integration and development, authentication and
-            authorization solutions, database design and development with
-            MongoDB, and UI/UX design with Figma and Bootstrap.
+            We build fast, secure, and scalable websites and web applications
+            tailored to your business goals. From modern UI/UX design and
+            responsive frontends to powerful backend systems, APIs,
+            authentication, and database integration, we deliver complete web
+            solutions that improve user experience, streamline operations, and
+            help your business grow.
           </p>
         </div>
 
@@ -83,15 +79,11 @@ const Expirence = () => {
             data-id="p_2"
             className={`${visible["p_2"] ? "slide-in" : ""}`}
           >
-            We specialize in creating stunning, high-performance mobile
-            applications for Android and iOS using Flutter and Dart, with
-            Firebase as our backend. We brings your mobile app idea to life with
-            custom design and development, leveraging the power of
-            cross-platform development to reach a wider audience. We provide a
-            range of services, including Firebase integration for backend
-            services, API integration and development. With expertise in Flutter
-            and Dart, we deliver fast development and deployment, beautiful
-            native-like UI/UX, and scalable and secure solutions.
+            We build fast, scalable, and user-friendly mobile apps for Android
+            and iOS from a single codebase. From intuitive UI/UX and seamless
+            API integration to secure backend systems and cloud services, we
+            create high-performance mobile applications that engage users and
+            help businesses grow.
           </p>
         </div>
       </div>

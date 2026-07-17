@@ -18,21 +18,13 @@ const MainView = () => {
         </h1>
         <div ref={pageText} className="header-text">
           <p>
-            "Welcome to The Easyb Studio, your premier destination for expert
-            Software development solutions. As a Software Company with skilled
-            developers, and passion for innovation and creativity, we specialize
-            in crafting bespoke digital experiences that drive real results. We
-            work with startups, entrepreneurs, and companies to turn ideas into
-            MVPs powerful digital products that engage users and deliver
-            results.
-            <span>
-              Whether you're looking to establish a strong online presence,
-              enhance your existing website, or leverage the latest Software
-              technologies to boost your business, you are at the right place,
-              we are here to help. Follow our journey, explore our portfolio,
-              and discover how The Easyb Studio can help you achieve your
-              digital goals."
-            </span>
+            <strong>
+              We Don't Just Build Software—We Solve Business Problems{". "}
+            </strong>
+            At The Easyb Studio, we help startups, entrepreneurs, and businesses
+            overcome digital challenges with high-performing websites, web
+            applications, mobile apps, and custom software built to grow your
+            business and achieve real results.
           </p>
         </div>
       </div>

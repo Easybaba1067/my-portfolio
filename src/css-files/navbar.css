@@ -1,6 +1,6 @@
 /* ====================== Navbar ====================== */
 .nav-bar {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 50;
   padding: 14px clamp(16px, 4vw, 48px);
