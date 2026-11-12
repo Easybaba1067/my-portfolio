@@ -43,7 +43,7 @@ const NavBar = () => {
   const careerStyle = {
     fontSize: "0.8rem",
     padding: "10px",
-    color: "rgba(24, 133, 206, 0.97)",
+    color: "var(--brand-500)",
   };
   return (
     <>

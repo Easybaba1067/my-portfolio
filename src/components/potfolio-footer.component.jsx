@@ -51,7 +51,7 @@ const Footer = ({ targetRef }) => {
         >
           <i
             className="devicon-google-plain colored"
-            style={{ fontSize: "1.5rem", color: "rgba(24, 133, 206, 0.97)" }}
+            style={{ fontSize: "1.5rem", color: "var(--brand-500)" }}
           ></i>
           <p>theeasybstudio@gmail.com</p>
         </div>
@@ -63,7 +63,7 @@ const Footer = ({ targetRef }) => {
         >
           <i
             className="bi bi-whatsapp"
-            style={{ fontSize: "1.5rem", color: "rgba(24, 133, 206, 0.97)" }}
+            style={{ fontSize: "1.5rem", color: "var(--brand-500)" }}
           ></i>
           <p>
             <a
@@ -83,11 +83,11 @@ const Footer = ({ targetRef }) => {
         >
           <i
             className="devicon-linkedin-plain colored"
-            style={{ fontSize: "1.5rem", color: "rgba(24, 133, 206, 0.97)" }}
+            style={{ fontSize: "1.5rem", color: "var(--brand-500)" }}
           ></i>
           <p>
             <a
-              href="https://www.linkedin.com/in/oluwoleisrael"
+              href="https://www.linkedin.com/in/olasunkanmi-israel-37a967449"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -99,11 +99,11 @@ const Footer = ({ targetRef }) => {
         <div
           ref={refs.facebook}
           data-id="facebook"
-          className={`Facebook ${visible["facebook"] ? "slide-in" : ""}`}
+          className={`facebook ${visible["facebook"] ? "slide-in" : ""}`}
         >
           <i
             className="devicon-facebook-plain colored"
-            style={{ fontSize: "1.5rem", color: "rgba(24, 133, 206, 0.97)" }}
+            style={{ fontSize: "1.5rem", color: "var(--brand-500)" }}
           ></i>
           <p>
             <a

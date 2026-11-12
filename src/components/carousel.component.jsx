@@ -6,7 +6,7 @@ const ResumeCarousel = () => {
   const careerStyle = {
     fontSize: "3rem",
     padding: "20px",
-    color: "rgba(24, 133, 206, 0.97)",
+    color: "var(--brand-500)",
   };
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -88,8 +88,8 @@ const ResumeCarousel = () => {
                 borderRadius: "50%",
                 backgroundColor:
                   index === currentIndex
-                    ? "rgba(24, 133, 206, 0.97)"
-                    : "lightgray",
+                    ? "var(--brand-500)"
+                    : "var(--border-strong)",
                 margin: "5px",
                 cursor: "pointer",
               }}

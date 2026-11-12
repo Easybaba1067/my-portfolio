@@ -6,7 +6,7 @@ const MobileNav = ({ isActive, isBlack, changeBackground }) => {
   const careerStyle = {
     fontSize: "0.8rem",
     padding: "10px",
-    color: "rgba(24, 133, 206, 0.97)",
+    color: "var(--brand-500)",
   };
   return (
     <>
@@ -44,12 +44,12 @@ const MobileNav = ({ isActive, isBlack, changeBackground }) => {
               className="devicon-linkedin-plain colored"
               style={{
                 fontSize: "1.5rem",
-                color: "#333",
+                color: "var(--brand-500)",
               }}
             ></i>
             <p>
               <a
-                href="https://www.linkedin.com/in/oluwoleisrael"
+                href="https://www.linkedin.com/in/olasunkanmi-israel-37a967449"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -62,7 +62,7 @@ const MobileNav = ({ isActive, isBlack, changeBackground }) => {
               className="devicon-facebook-plain colored"
               style={{
                 fontSize: "1.5rem",
-                color: "#333",
+                color: "var(--brand-500)",
               }}
             ></i>
             <p>
@@ -80,7 +80,7 @@ const MobileNav = ({ isActive, isBlack, changeBackground }) => {
               className="devicon-google-plain colored"
               style={{
                 fontSize: "1.5rem",
-                color: "#333",
+                color: "var(--brand-500)",
               }}
             ></i>
             <p>theeasybstudio@gmail.com</p>
@@ -90,7 +90,7 @@ const MobileNav = ({ isActive, isBlack, changeBackground }) => {
               className="bi bi-whatsapp"
               style={{
                 fontSize: "1.5rem",
-                color: "#333",
+                color: "var(--brand-500)",
               }}
             ></i>
             <p>

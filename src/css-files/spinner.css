@@ -3,7 +3,7 @@
   inset: 0;
   height: 100vh;
   width: 100vw;
-  background: var(--grad-hero), var(--bg-elev);
+  background: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,62 +12,38 @@
 }
 
 .orbit-loader {
-  position: relative;
-  width: 96px;
-  height: 96px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .orbit-loader span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 18px;
-  height: 18px;
-  margin: -9px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: var(--brand-500);
-  box-shadow: 0 0 24px rgba(33, 137, 235, 0.5);
-  animation: orbit 1.4s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+  animation: dotPulse 1.2s var(--ease-out) infinite;
 }
 
 .orbit-loader span:nth-child(2) {
-  background: var(--accent-violet);
-  box-shadow: 0 0 24px rgba(124, 92, 255, 0.5);
-  animation-delay: 0.18s;
+  background: var(--brand-400);
+  animation-delay: 0.16s;
 }
 
 .orbit-loader span:nth-child(3) {
-  background: var(--accent-cyan);
-  box-shadow: 0 0 24px rgba(34, 211, 238, 0.5);
-  animation-delay: 0.36s;
+  background: var(--brand-300);
+  animation-delay: 0.32s;
 }
 
-.orbit-loader::before {
-  content: "";
-  position: absolute;
-  inset: 18px;
-  border-radius: 50%;
-  border: 2px dashed var(--border-strong);
-  animation: spin 8s linear infinite;
-}
-
-@keyframes orbit {
-  0% {
-    transform: rotate(0deg) translateX(36px) rotate(0deg) scale(0.9);
-    opacity: 0.4;
-  }
-  20% {
-    opacity: 1;
-  }
+@keyframes dotPulse {
+  0%,
   100% {
-    transform: rotate(360deg) translateX(36px) rotate(-360deg) scale(0.9);
-    opacity: 0.4;
+    transform: translateY(0) scale(0.8);
+    opacity: 0.35;
   }
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+  40% {
+    transform: translateY(-8px) scale(1);
+    opacity: 1;
   }
 }
 

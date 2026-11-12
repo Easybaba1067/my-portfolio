@@ -1,16 +1,35 @@
 const projects = {
+  Vault: [
+    "/vault/1.jpeg",
+    "/vault/2.jpeg",
+    "/vault/3.jpeg",
+    "/vault/4.jpeg",
+    "/vault/5.jpeg",
+    "/vault/6.jpeg",
+    "/vault/7.jpeg",
+    "/vault/8.jpeg",
+  ],
+
   ShipTrack: [
     "/shiptrack/1.jpeg",
     "/shiptrack/2.jpeg",
     "/shiptrack/3.jpeg",
     "/shiptrack/4.jpeg",
     "/shiptrack/5.jpeg",
+    "/shiptrack/6 (2).jpeg",
+    "/shiptrack/6.jpeg",
+    "/shiptrack/7.jpeg",
+    "/shiptrack/8.jpeg",
+    "/shiptrack/9.jpeg",
   ],
   Crownivext: [
+    "/crowninvext/1 (2).jpeg",
     "/crowninvext/1.jpeg",
     "/crowninvext/2.jpeg",
     "/crowninvext/3.jpeg",
     "/crowninvext/4.jpeg",
+    "/crowninvext/6.jpeg",
+    "/crowninvext/7.jpeg",
   ],
   Royal_Liberty_School: [
     "/royallib/1.jpeg",
@@ -18,6 +37,10 @@ const projects = {
     "/royallib/3.jpeg",
     "/royallib/4.jpeg",
     "/royallib/5.jpeg",
+    "/royallib/6.jpeg",
+    "/royallib/7.jpeg",
+    "/royallib/8.jpeg",
+    "/royallib/9.jpeg",
   ],
   Wayhacks: [
     "/wayhacks/1.png",

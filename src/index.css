@@ -1,49 +1,46 @@
 /* ===== Design Tokens ===== */
 :root {
-  /* Brand */
-  --brand-50: #ecf6ff;
-  --brand-100: #d6ecff;
-  --brand-200: #b3dcff;
-  --brand-300: #7fc3ff;
-  --brand-400: #4aa6fb;
-  --brand-500: #2189eb; /* primary */
-  --brand-600: #166fc7;
-  --brand-700: #0e57a0;
-  --brand-800: #0a4180;
-  --brand-900: #072e5e;
-
-  /* Accents */
-  --accent-violet: #7c5cff;
-  --accent-cyan: #22d3ee;
-  --accent-amber: #f59e0b;
-  --accent-pink: #ec4899;
-  --accent-emerald: #10b981;
+  /* Brand — sky blue accent */
+  --brand-50: #f0f9ff;
+  --brand-100: #e0f2fe;
+  --brand-200: #bae6fd;
+  --brand-300: #7dd3fc;
+  --brand-400: #38bdf8;
+  --brand-500: #0ea5e9; /* primary accent */
+  --brand-600: #0284c7;
+  --brand-700: #0369a1;
+  --brand-800: #075985;
+  --brand-900: #0c4a6e;
 
   /* Surfaces (light) */
-  --bg: #f6f8fc;
+  --bg: #ffffff;
   --bg-elev: #ffffff;
-  --bg-soft: #eef3fb;
+  --bg-soft: #f5f7f9;
   --surface: #ffffff;
-  --surface-2: #f4f7fc;
-  --surface-3: #eaf0f8;
+  --surface-2: #f5f7f9;
+  --surface-3: #eef1f5;
 
   /* Text (light) */
-  --text: #0b1220;
-  --text-muted: #4a5568;
+  --text: #0a0a0a;
+  --text-muted: #4b5563;
   --text-subtle: #6b7280;
-  --text-invert: #f8fafc;
+  --text-invert: #ffffff;
 
   /* Borders & lines */
-  --border: rgba(15, 23, 42, 0.08);
-  --border-strong: rgba(15, 23, 42, 0.16);
-  --divider: rgba(15, 23, 42, 0.06);
+  --border: rgba(10, 10, 10, 0.08);
+  --border-strong: rgba(10, 10, 10, 0.16);
+  --divider: rgba(10, 10, 10, 0.06);
 
   /* Shadows */
-  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
-  --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.06);
-  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
-  --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12);
-  --shadow-glow: 0 12px 40px rgba(33, 137, 235, 0.25);
+  --shadow-xs: 0 1px 2px rgba(10, 10, 10, 0.05);
+  --shadow-sm: 0 2px 6px rgba(10, 10, 10, 0.06);
+  --shadow-md: 0 8px 24px rgba(10, 10, 10, 0.08);
+  --shadow-lg: 0 20px 50px rgba(10, 10, 10, 0.12);
+  --shadow-glow: 0 12px 32px rgba(14, 165, 233, 0.28);
+
+  /* Footer */
+  --footer-bg: #0a0a0a;
+  --footer-text: #ffffff;
 
   /* Radii */
   --r-sm: 8px;
@@ -74,75 +71,47 @@
   --ff-mono: "Space Grotesk", "Courier New", Courier, monospace;
   --ff-serif: "Plus Jakarta Sans", "Times New Roman", Times, serif;
 
-  /* Gradients */
-  --grad-primary: linear-gradient(135deg, #2189eb 0%, #7c5cff 100%);
-  --grad-soft: linear-gradient(135deg, #ecf6ff 0%, #f3eaff 100%);
-  --grad-hero:
-    radial-gradient(
-      1200px 600px at 20% 10%,
-      rgba(33, 137, 235, 0.18),
-      transparent 60%
-    ),
-    radial-gradient(
-      1000px 500px at 90% 20%,
-      rgba(124, 92, 255, 0.16),
-      transparent 60%
-    ),
-    radial-gradient(
-      800px 500px at 50% 90%,
-      rgba(34, 211, 238, 0.12),
-      transparent 60%
-    );
+  /* Accent tokens (solid — no gradients) */
+  --grad-primary: var(--brand-500);
+  --grad-soft: var(--bg-soft);
+  --grad-hero: transparent;
 
   /* Motion */
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --t-fast: 160ms;
-  --t-base: 260ms;
-  --t-slow: 520ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --t-fast: 150ms;
+  --t-base: 250ms;
+  --t-slow: 500ms;
 }
 
 /* Dark theme overrides */
 body.active {
-  --bg: #07090f;
-  --bg-elev: #0e121b;
-  --bg-soft: #0a0d15;
-  --surface: #11151f;
-  --surface-2: #161b27;
-  --surface-3: #1c2230;
+  --bg: #0a0a0a;
+  --bg-elev: #111111;
+  --bg-soft: #0f0f0f;
+  --surface: #141414;
+  --surface-2: #1a1a1a;
+  --surface-3: #222222;
 
-  --text: #f1f5f9;
-  --text-muted: #cbd5e1;
-  --text-subtle: #94a3b8;
-  --text-invert: #0b1220;
+  --text: #fafafa;
+  --text-muted: #a3a3a3;
+  --text-subtle: #737373;
+  --text-invert: #0a0a0a;
 
-  --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.18);
-  --divider: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.2);
+  --divider: rgba(255, 255, 255, 0.07);
 
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
   --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.45);
   --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.55);
-  --shadow-glow: 0 16px 50px rgba(33, 137, 235, 0.45);
+  --shadow-glow: 0 12px 32px rgba(14, 165, 233, 0.35);
 
-  --grad-soft: linear-gradient(135deg, #0e1729 0%, #161430 100%);
-  --grad-hero:
-    radial-gradient(
-      1200px 600px at 20% 10%,
-      rgba(33, 137, 235, 0.28),
-      transparent 60%
-    ),
-    radial-gradient(
-      1000px 500px at 90% 20%,
-      rgba(124, 92, 255, 0.22),
-      transparent 60%
-    ),
-    radial-gradient(
-      800px 500px at 50% 90%,
-      rgba(34, 211, 238, 0.16),
-      transparent 60%
-    );
+  --footer-bg: #111111;
+  --footer-text: #fafafa;
+
+  --grad-soft: var(--bg-soft);
 }
 
 * {
@@ -171,10 +140,8 @@ body {
     color var(--t-base) var(--ease-out);
 }
 
-body.active {
-  a {
-    color: var(--text);
-  }
+body.active a {
+  color: var(--text);
 }
 
 a {
@@ -199,11 +166,11 @@ code {
 
 /* ===== Reusable utilities ===== */
 .highlight {
-  background: var(--grad-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: var(--brand-500);
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: currentColor;
 }
 
 .section {
@@ -234,7 +201,7 @@ code {
   height: 3px;
   width: 64px;
   border-radius: 999px;
-  background: var(--grad-primary);
+  background: var(--brand-500);
 }
 
 .eyebrow {
@@ -243,7 +210,7 @@ code {
   letter-spacing: 0.18em;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--brand-500);
+  color: var(--brand-600);
   background: var(--brand-50);
   padding: 6px 14px;
   border-radius: var(--r-pill);
@@ -251,12 +218,27 @@ code {
 }
 
 body.active .eyebrow {
-  background: rgba(33, 137, 235, 0.15);
+  background: rgba(14, 165, 233, 0.15);
   color: var(--brand-300);
 }
 
-/* Scroll-in animation baseline (used by components) */
+/* ===== Shared scroll-reveal ===== */
 .slide-in {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+  opacity: 1;
+  transform: none;
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

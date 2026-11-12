@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import projects from "../../my-projects";
+import { projectToSlug } from "../../project-utils";
 import ProjectCarousel from "./projects-carousel.component";
 
 const ProjectShowcase = () => {
@@ -29,10 +31,18 @@ const ProjectShowcase = () => {
     <section className="showcasing">
       {Object.entries(projects).map(([Title, images]) => (
         <div key={Title}>
-          <ProjectCarousel title={Title} images={images} />
-          <h1 data-id={Title} className={`${visible[Title] ? "slide-in" : ""}`}>
-            {Title.replace(/_/g, " ")}
-          </h1>
+          <Link
+            className="project-card-link"
+            to={`/projects/${projectToSlug(Title)}`}
+          >
+            <ProjectCarousel title={Title} images={images} />
+            <h1
+              data-id={Title}
+              className={`${visible[Title] ? "slide-in" : ""}`}
+            >
+              {Title.replace(/_/g, " ")}
+            </h1>
+          </Link>
         </div>
       ))}
     </section>

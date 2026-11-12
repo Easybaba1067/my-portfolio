@@ -38,6 +38,13 @@
   transition: transform var(--t-base) var(--ease-out);
 }
 
+.project-card-link {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: inherit;
+}
+
 .showcasing > div:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
@@ -124,7 +131,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 60%, rgba(7, 14, 31, 0.45) 100%);
+  background: rgba(7, 14, 31, 0.28);
   pointer-events: none;
 }
 

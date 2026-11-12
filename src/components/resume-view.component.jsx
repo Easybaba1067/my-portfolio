@@ -5,7 +5,7 @@ const ResumeView = () => {
     <div className="resume-view">
       <div className="introduction">
         <div className="profile-pic">
-          <img src="/IMG-20221106-WA0001.jpg" alt="profile" />
+          <img src="/profile-image.jpeg" alt="profile" />
         </div>
         <div>
           <h1>

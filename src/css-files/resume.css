@@ -16,14 +16,8 @@ a {
   min-height: 100vh;
   width: 100%;
   position: relative;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(7, 14, 31, 0.7) 0%,
-      rgba(33, 137, 235, 0.5) 100%
-    ),
-    url("/public/oliver-pecker-HONJP8DyiSM-unsplash.jpg") no-repeat center
-      center/cover;
+  background: url("/public/oliver-pecker-HONJP8DyiSM-unsplash.jpg") no-repeat
+    center center/cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,9 +33,21 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--grad-hero);
-  opacity: 0.5;
+  background: rgba(8, 10, 14, 0.66);
   z-index: -1;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }
 
 .introduction {
@@ -56,6 +62,7 @@ a {
   margin: 0 auto;
   flex: 0 1 auto;
   z-index: 1;
+  animation: riseIn 0.9s var(--ease-out) both;
 }
 
 .introduction h1 {
@@ -70,10 +77,11 @@ a {
 }
 
 .introduction h1 .highlight {
-  background: linear-gradient(135deg, #b3dcff 0%, #fff 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--brand-300);
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: currentColor;
 }
 
 .introduction h2 {
@@ -99,10 +107,10 @@ a {
   position: absolute;
   inset: -6px;
   border-radius: 50%;
-  background: var(--grad-primary);
+  background: var(--brand-500);
   z-index: -1;
   filter: blur(18px);
-  opacity: 0.6;
+  opacity: 0.45;
 }
 
 .profile-pic img {
@@ -130,6 +138,7 @@ a {
   color: #fff;
   z-index: 1;
   flex: 0 0 auto;
+  animation: riseIn 0.9s var(--ease-out) 0.2s both;
 }
 
 .qoute .qoute-text h2 {
@@ -152,12 +161,12 @@ a {
 }
 
 .qoute .highlight {
-  color: #b3dcff !important;
+  color: var(--brand-300) !important;
   width: auto;
   white-space: normal;
   padding: 0;
   background: none;
-  -webkit-text-fill-color: #b3dcff;
+  -webkit-text-fill-color: var(--brand-300);
 }
 
 /* ===== About ===== */
@@ -179,17 +188,8 @@ a {
   position: relative;
   transition:
     transform var(--t-base) var(--ease-out),
-    box-shadow var(--t-base) var(--ease-out);
-}
-
-.resume-about-content::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: var(--grad-soft);
-  opacity: 0.4;
-  z-index: -1;
+    box-shadow var(--t-base) var(--ease-out),
+    border-color var(--t-base) var(--ease-out);
 }
 
 .resume-about-content p {
@@ -202,11 +202,12 @@ a {
 .resume-about-content:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+  border-color: var(--brand-300);
 }
 
 .resume-btn:hover {
   background: var(--surface);
-  color: var(--accent-amber);
+  color: var(--brand-500);
 }
 
 /* ===== Career / "What I do" ===== */
@@ -282,16 +283,6 @@ a {
   margin: 0;
 }
 
-.career-info::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: var(--grad-soft);
-  opacity: 0.35;
-  z-index: -1;
-}
-
 .career-info::before {
   content: "";
   position: absolute;
@@ -299,7 +290,7 @@ a {
   left: 0;
   width: 100%;
   height: 4px;
-  background: var(--grad-primary);
+  background: var(--brand-500);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--t-base) var(--ease-out);
@@ -308,7 +299,7 @@ a {
 .career-info:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--brand-200);
+  border-color: var(--brand-300);
 }
 
 .career-info:hover::before {
@@ -347,17 +338,44 @@ a {
 .career h2,
 .career p {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(22px);
+  filter: blur(6px);
   transition:
-    transform 0.8s var(--ease-out),
-    opacity 0.8s var(--ease-out);
+    opacity 0.7s var(--ease-out),
+    transform 0.7s var(--ease-out),
+    filter 0.7s var(--ease-out);
+}
+
+.career-summary .career-info:nth-child(1) h2 {
+  transition-delay: 0ms;
+}
+
+.career-summary .career-info:nth-child(1) p {
+  transition-delay: 80ms;
+}
+
+.career-summary .career-info:nth-child(2) h2 {
+  transition-delay: 120ms;
+}
+
+.career-summary .career-info:nth-child(2) p {
+  transition-delay: 200ms;
+}
+
+.career-summary .career-info:nth-child(3) h2 {
+  transition-delay: 240ms;
+}
+
+.career-summary .career-info:nth-child(3) p {
+  transition-delay: 320ms;
 }
 
 .career h1.slide-in,
 .career h2.slide-in,
 .career p.slide-in {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  filter: blur(0);
 }
 
 /* ===== Profession / Personal summary ===== */
@@ -374,25 +392,18 @@ a {
   position: relative;
   overflow: hidden;
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(22px);
+  filter: blur(6px);
   transition:
-    transform 0.8s var(--ease-out),
-    opacity 0.8s var(--ease-out);
-}
-
-.profession::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: var(--grad-soft);
-  opacity: 0.4;
-  z-index: -1;
+    opacity 0.7s var(--ease-out),
+    transform 0.7s var(--ease-out),
+    filter 0.7s var(--ease-out);
 }
 
 .profession.slide-in {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  filter: blur(0);
 }
 
 .profession h1 {
@@ -464,16 +475,18 @@ a {
   font-size: 0.95rem;
   transition:
     background-color var(--t-fast) var(--ease-out),
-    color var(--t-fast) var(--ease-out);
+    color var(--t-fast) var(--ease-out),
+    transform var(--t-fast) var(--ease-out);
 }
 
 .profession .seperate li:hover {
   background: var(--brand-50);
   color: var(--text);
+  transform: translateX(4px);
 }
 
 body.active .profession .seperate li:hover {
-  background: rgba(33, 137, 235, 0.15);
+  background: rgba(14, 165, 233, 0.15);
 }
 
 .profession .seperate li i {
@@ -495,20 +508,19 @@ body.active .profession .seperate li:hover {
   font-style: normal;
   background: var(--bg-soft);
   position: relative;
-}
-
-.contact::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--grad-soft);
-  opacity: 0.5;
-  pointer-events: none;
+  opacity: 0;
+  transform: translateY(22px);
+  filter: blur(6px);
+  transition:
+    opacity 0.7s var(--ease-out),
+    transform 0.7s var(--ease-out),
+    filter 0.7s var(--ease-out);
 }
 
 .contact.slide-in {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  filter: blur(0);
 }
 
 .contact > * {
@@ -586,7 +598,7 @@ body.active .profession .seperate li:hover {
 .contact form textarea:focus {
   outline: none;
   border-color: var(--brand-500);
-  box-shadow: 0 0 0 4px rgba(33, 137, 235, 0.12);
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.14);
   background: var(--surface);
 }
 
@@ -596,9 +608,22 @@ body.active .profession .seperate li:hover {
   border-radius: var(--r-lg);
 }
 
+.contact-error {
+  width: 100%;
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  border-left: 3px solid var(--brand-500);
+  color: var(--text);
+  font-size: 0.9rem;
+  text-align: left;
+}
+
 button.Btn {
   align-self: center;
-  background: var(--grad-primary);
+  background: var(--brand-500);
   color: #fff;
   border: none;
   padding: 12px 32px;
@@ -611,12 +636,21 @@ button.Btn {
   box-shadow: var(--shadow-glow);
   transition:
     transform var(--t-fast) var(--ease-out),
+    background-color var(--t-fast) var(--ease-out),
     box-shadow var(--t-fast) var(--ease-out);
 }
 
 button.Btn:hover {
+  background: var(--brand-600);
   transform: translateY(-2px);
-  box-shadow: 0 16px 50px rgba(124, 92, 255, 0.4);
+  box-shadow: 0 16px 42px rgba(14, 165, 233, 0.36);
+}
+
+button.Btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 /* ===== Contact success state ===== */
@@ -632,7 +666,7 @@ button.Btn:hover {
 }
 
 .contact-success i {
-  background: rgba(16, 185, 129, 0.12);
+  background: rgba(14, 165, 233, 0.12);
   border-radius: 50%;
   width: 72px;
   height: 72px;
@@ -640,7 +674,7 @@ button.Btn:hover {
   align-items: center;
   justify-content: center;
   font-size: 2rem !important;
-  color: var(--accent-emerald) !important;
+  color: var(--brand-500) !important;
 }
 
 .contact-success p {
@@ -665,12 +699,13 @@ button.Btn:hover {
 /* ===== Bottom footer ===== */
 .footer {
   text-align: center;
-  color: #fff;
-  background: var(--grad-primary);
+  color: var(--footer-text);
+  background: var(--footer-bg);
   padding: 16px 20px;
   border-radius: 0;
   font-family: var(--ff-display);
   font-size: 0.9rem;
   letter-spacing: 0.02em;
   margin: 0;
+  border-top: 1px solid var(--border);
 }

@@ -3,6 +3,7 @@ import NavBar from "./components/nav-bar.component";
 import Home from "./pages/home";
 import Resume from "./pages/resume";
 import ProjectPage from "./pages/project";
+import ProjectDetails from "./pages/project-details";
 import "./App.css";
 import "./css-files/mobile.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -15,6 +16,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="resume" element={<Resume />} />
         <Route path="projects" element={<ProjectPage />} />
+        <Route path="projects/:slug" element={<ProjectDetails />} />
       </Route>
     </Routes>
   );

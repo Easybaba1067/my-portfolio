@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from "react";
 const ResumeContact = () => {
   const [visible, setVisible] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
   const contactRef = useRef(null);
 
   useEffect(() => {
@@ -28,16 +30,27 @@ const ResumeContact = () => {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    setSubmitting(true);
+    setError("");
+
     try {
-      await fetch("/", {
+      const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString(),
       });
+
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+
       setSubmitted(true);
     } catch (err) {
-      // Still show success UI; the submission will retry on next visit if it failed
-      setSubmitted(true);
+      setError(
+        "Something went wrong. Please try again or reach me directly at theeasybstudio@gmail.com.",
+      );
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -53,7 +66,11 @@ const ResumeContact = () => {
               Contact
               <i
                 className="bi bi-phone"
-                style={{ fontSize: "2rem", padding: "10px", color: "#ffff" }}
+                style={{
+                  fontSize: "2rem",
+                  padding: "10px",
+                  color: "var(--brand-500)",
+                }}
               ></i>
             </h1>
             <div>
@@ -61,7 +78,7 @@ const ResumeContact = () => {
                 <div className="contact-success" role="status">
                   <i
                     className="bi bi-check-circle-fill"
-                    style={{ fontSize: "2rem", color: "#10b981" }}
+                    style={{ fontSize: "2rem", color: "var(--brand-500)" }}
                   ></i>
                   <p>
                     Thanks for reaching out! Your message has been sent
@@ -84,8 +101,9 @@ const ResumeContact = () => {
                     </label>
                   </p>
                   <div>
-                    <label for="name">Name</label>
+                    <label htmlFor="name">Name</label>
                     <input
+                      id="name"
                       type="text"
                       name="Name"
                       placeholder="Name"
@@ -93,8 +111,9 @@ const ResumeContact = () => {
                     />
                   </div>
                   <div>
-                    <label for="phone number">Phone</label>
+                    <label htmlFor="number">Phone</label>
                     <input
+                      id="number"
                       type="tel"
                       name="number"
                       placeholder="Phone number"
@@ -102,8 +121,9 @@ const ResumeContact = () => {
                     />
                   </div>
                   <div>
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                     <input
+                      id="email"
                       type="email"
                       name="email"
                       placeholder="Email address"
@@ -111,7 +131,7 @@ const ResumeContact = () => {
                     />
                   </div>
                   <div>
-                    <label for="message">Message</label>
+                    <label htmlFor="message">Message</label>
                     <textarea
                       id="message"
                       name="message"
@@ -119,8 +139,13 @@ const ResumeContact = () => {
                       required
                     ></textarea>
                   </div>
-                  <button className="Btn" type="submit">
-                    submit
+                  {error && (
+                    <p className="contact-error" role="alert">
+                      {error}
+                    </p>
+                  )}
+                  <button className="Btn" type="submit" disabled={submitting}>
+                    {submitting ? "Sending..." : "Submit"}
                   </button>
                 </form>
               )}

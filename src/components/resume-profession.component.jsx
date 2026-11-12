@@ -4,7 +4,7 @@ const Profession = () => {
   const myStyle = {
     fontSize: "1.5rem",
     padding: "10px",
-    color: "rgba(24, 133, 206, 0.97)",
+    color: "var(--brand-500)",
   };
 
   const [visible, setVisible] = useState({});
